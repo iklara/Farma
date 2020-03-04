@@ -7,10 +7,10 @@ import java.awt.*;
 
             EventQueue.invokeLater(new Runnable() {
                 public void run() {
-                    GUIFarma.MyJFrame window = new GUIFarma.MyJFrame();
+                    MyJFrame window = new MyJFrame();
                 }
             });
         }
     }
 
-}
+
