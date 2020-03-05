@@ -1,4 +1,6 @@
 
+import playground.PlaygroundPane;
+
 import javax.swing.JFrame;
 
 
