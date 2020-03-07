@@ -14,10 +14,10 @@ public class MyJFrame extends JFrame {
         setTitle("Witaj na Farmie");
 
 
-//			add(new MyJPanel());
-//        add(new MyJPanel2());
+        add(new EkranPowitalny());
+       add(new MyJPanel2());
 //			new backgroundImage();
-        add(new PlaygroundPane());
+//        add(new PlaygroundPane());
 
 
         pack();

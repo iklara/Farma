@@ -8,6 +8,7 @@ public class PlaygroundPane extends JPanel {
     @Override
     public Dimension getPreferredSize() {
         return new Dimension(800, 800);
+
     }
 
     EAnimals[] animalsList = EAnimals.values();

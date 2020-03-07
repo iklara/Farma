@@ -14,7 +14,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
-public class MyJPanel extends JPanel {
+public class EkranPowitalny extends JPanel {
 
     JTextField text;
     JPasswordField text2;
@@ -41,7 +41,7 @@ public class MyJPanel extends JPanel {
         }
     }
 
-    public MyJPanel() {
+    public EkranPowitalny() {
 
         Font czcionka = new Font("Calabri", Font.BOLD, 12);
         Font czcionkaLogo = new Font("Calabri", Font.BOLD, 52);
