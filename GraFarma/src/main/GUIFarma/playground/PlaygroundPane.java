@@ -2,6 +2,8 @@ package playground;
 
 import javax.swing.*;
 import java.awt.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class PlaygroundPane extends JPanel {
@@ -15,55 +17,112 @@ public class PlaygroundPane extends JPanel {
     Random r = new Random();
     int animalDice1;
     int animalDice2;
-    JButton buttonAnimals;
+    JLabel label;
     JButton buttonThrowDice;
-    JButton buttonThrowDice2;
-    ButtonGroup buttonGroup;
     JLabel labelFirstDice;
     JLabel labelSecondDice;
-    int size = 100;
-    int x = 50;
-    int y = 50;
-    int row = 5;
-    int buttonLocation = 0;
+
+    ArrayList<JLabel> rabbitsRow = new ArrayList<>();
+    ArrayList<JLabel> pigsRow = new ArrayList<>();
+    ArrayList<JLabel> sheepsRow = new ArrayList<>();
+    ArrayList<JLabel> cowRow = new ArrayList<>();
+    ArrayList<JLabel> horseRow = new ArrayList<>();
+
+    int size = 105;
+    int x = 450;
+    int y = 480;
+
 
     public PlaygroundPane() {
         System.out.println(animalsList.length);
         setLayout(null);
         for (int i = 0; i < 5; i++) {
             for (int j = i; j < 5; j++) {
-                buttonAnimals = new JButton();
-                buttonAnimals.setBounds(x + (j * size - i * 50), y + (i * size), size, size);
-                buttonAnimals.setText(String.valueOf(buttonLocation++));
-                buttonAnimals.setIcon(EAnimals.BIGDOG.getIconSize());
-                add(buttonAnimals);
+                label = new JLabel();
+                label.setBounds(x - (j * (size + 10) - i * 50), y - (i * size), size, size);
+                label.setIcon(EAnimals.getWaterBear());
+                add(label);
+
+                switch (i) {
+                    case 0:
+                        rabbitsRow.add(label);
+                        break;
+                        case 1:
+                        sheepsRow.add(label);
+                        break;
+                        case 2:
+                        pigsRow.add(label);
+                        break;
+                        case 3:
+                        cowRow.add(label);
+                        break;
+                        case 4:
+                        horseRow.add(label);
+                        break;
+                }
             }
         }
 
-
         buttonThrowDice = new JButton();
-        buttonThrowDice2 = new JButton();
-
         buttonThrowDice.setText("Throw Dice");
-        buttonThrowDice2.setText("kasasd");
-        buttonThrowDice.setBounds(500, 600, 100, 100);
-        buttonThrowDice2.setBounds(600, 600, 100, 100);
+        buttonThrowDice.setBounds(555, 190, 100, 100);
+        buttonThrowDice.setIcon(EAnimals.getDiceIcon());
+        add(buttonThrowDice);
+
+        labelFirstDice = new JLabel();
+        labelSecondDice = new JLabel();
+        labelFirstDice.setBounds(500, 300, 100, 100);
+        labelSecondDice.setBounds(610, 300, 100, 100);
 
         buttonThrowDice.addActionListener(action -> {
             animalDice1 = new Random().nextInt(8);
             animalDice2 = new Random().nextInt(8) + 1;
+            labelFirstDice.setIcon(animalsList[animalDice1].getIconSize());
+            labelSecondDice.setIcon(animalsList[animalDice2].getIconSize());
+            if (animalDice1 == animalDice2){
+         switch (animalDice1){
+             case 2:
+                 if (horseRow.size()>1) {
+                     horseRow.get(0).setIcon(animalsList[animalDice1].getIconSize());
+                 }else JOptionPane.showMessageDialog(this,"Nie ma co dodawać");
+                 break;
 
-            buttonThrowDice.setIcon(animalsList[animalDice1].getIconSize());
-            buttonThrowDice2.setIcon(animalsList[animalDice2].getIconSize());
-            System.out.println(animalDice1 + " " + animalDice2 +" " + animalsList[animalDice2]);
+             case 3:
+                 if (cowRow.size()>2) {
+
+                     cowRow.get(cowRow.size()+1).setIcon(animalsList[animalDice1].getIconSize());
+                 }else JOptionPane.showMessageDialog(this,"Nie ma co dodawać");
+                 break;
+
+             case 4:
+                 if (pigsRow.size()>3) {
+                     pigsRow.get(pigsRow.size()+1).setIcon(animalsList[animalDice1].getIconSize());
+                 }else JOptionPane.showMessageDialog(this,"Nie ma co dodawać");
+                 break;
+
+             case 5:
+                 if (sheepsRow.size()>4) {
+                     sheepsRow.get(sheepsRow.size()+1).setIcon(animalsList[animalDice1].getIconSize());
+                 }else JOptionPane.showMessageDialog(this,"Nie ma co dodawać");
+                 break;
+
+             case 6:
+                 if (rabbitsRow.size()>4) {
+                     rabbitsRow.get(rabbitsRow.size()+1).setIcon(animalsList[animalDice1].getIconSize());
+                 }else JOptionPane.showMessageDialog(this,"Nie ma co dodawać");
+                 break;
+
+
+         }
+
+
+            }
+
         });
 
+        add(labelFirstDice);
+        add(labelSecondDice);
 
-        buttonGroup = new ButtonGroup();
-        buttonGroup.add(buttonThrowDice);
-        buttonGroup.add(buttonThrowDice2);
-        add(buttonThrowDice);
-        add(buttonThrowDice2);
     }
 
 
