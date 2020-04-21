@@ -29,7 +29,7 @@ public class PlaygroundPane extends JPanel {
     ArrayList<JLabel> horseRow = new ArrayList<>();
 
     int size = 105;
-    int x = 450;
+    int x = 480;
     int y = 480;
 
 
@@ -47,16 +47,16 @@ public class PlaygroundPane extends JPanel {
                     case 0:
                         rabbitsRow.add(label);
                         break;
-                        case 1:
+                    case 1:
                         sheepsRow.add(label);
                         break;
-                        case 2:
+                    case 2:
                         pigsRow.add(label);
                         break;
-                        case 3:
+                    case 3:
                         cowRow.add(label);
                         break;
-                        case 4:
+                    case 4:
                         horseRow.add(label);
                         break;
                 }
@@ -79,41 +79,47 @@ public class PlaygroundPane extends JPanel {
             animalDice2 = new Random().nextInt(8) + 1;
             labelFirstDice.setIcon(animalsList[animalDice1].getIconSize());
             labelSecondDice.setIcon(animalsList[animalDice2].getIconSize());
-            if (animalDice1 == animalDice2){
-         switch (animalDice1){
-             case 2:
-                 if (horseRow.size()>1) {
-                     horseRow.get(0).setIcon(animalsList[animalDice1].getIconSize());
-                 }else JOptionPane.showMessageDialog(this,"Nie ma co dodawać");
-                 break;
+            if (animalDice1 == animalDice2) {
+                switch (animalDice1) {
+                    case 2:
+//                        if (horseRow.get(0).getIcon().equals(EAnimals.getWaterBear().getImage()) ) {
+//                            horseRow.get(0).setIcon(animalsList[animalDice1].getIconSize());
+//                        } else JOptionPane.showMessageDialog(this, "Nie ma co dodawać");
 
-             case 3:
-                 if (cowRow.size()>2) {
+                        horseRow.get(0).setIcon(animalsList[animalDice1].getIconSize());
+                        break;
 
-                     cowRow.get(cowRow.size()+1).setIcon(animalsList[animalDice1].getIconSize());
-                 }else JOptionPane.showMessageDialog(this,"Nie ma co dodawać");
-                 break;
+                    case 3:
+//                        if (cowRow.size() > 2 && cowRow.get(0).getIcon().equals(EAnimals.getWaterBear())) {
+//                            cowRow.get(cowRow.size() + 1).setIcon(animalsList[animalDice1].getIconSize());
+//                        } else JOptionPane.showMessageDialog(this, "Nie ma co dodawać");
 
-             case 4:
-                 if (pigsRow.size()>3) {
-                     pigsRow.get(pigsRow.size()+1).setIcon(animalsList[animalDice1].getIconSize());
-                 }else JOptionPane.showMessageDialog(this,"Nie ma co dodawać");
-                 break;
+                        cowRow.get(0).setIcon(animalsList[animalDice1].getIconSize());
+                        break;
 
-             case 5:
-                 if (sheepsRow.size()>4) {
-                     sheepsRow.get(sheepsRow.size()+1).setIcon(animalsList[animalDice1].getIconSize());
-                 }else JOptionPane.showMessageDialog(this,"Nie ma co dodawać");
-                 break;
+                    case 4:
+//                        if (pigsRow.get(0).getIcon().equals(EAnimals.getWaterBear())) {
+//                            pigsRow.get(pigsRow.size() + 1).setIcon(animalsList[animalDice1].getIconSize());
+//                        } else JOptionPane.showMessageDialog(this, "Nie ma co dodawać");
+                        pigsRow.get(0).setIcon(animalsList[animalDice1].getIconSize());
+                        break;
 
-             case 6:
-                 if (rabbitsRow.size()>4) {
-                     rabbitsRow.get(rabbitsRow.size()+1).setIcon(animalsList[animalDice1].getIconSize());
-                 }else JOptionPane.showMessageDialog(this,"Nie ma co dodawać");
-                 break;
+                    case 5:
+//                        if ( sheepsRow.get(0).getIcon().equals(EAnimals.getWaterBear())) {
+//                            sheepsRow.get(sheepsRow.size() + 1).setIcon(animalsList[animalDice1].getIconSize());
+//                        } else JOptionPane.showMessageDialog(this, "Nie ma co dodawać");
+                        sheepsRow.get(0).setIcon(animalsList[animalDice1].getIconSize());
+                        break;
+
+                    case 6:
+//                        if (rabbitsRow.get(0).getIcon().equals(EAnimals.getWaterBear())) {
+//                            rabbitsRow.get(rabbitsRow.size() + 1).setIcon(animalsList[animalDice1].getIconSize());
+//                        } else JOptionPane.showMessageDialog(this, "Nie ma co dodawać");
+                        rabbitsRow.get(0).setIcon(animalsList[animalDice1].getIconSize());
+                        break;
 
 
-         }
+                }
 
 
             }

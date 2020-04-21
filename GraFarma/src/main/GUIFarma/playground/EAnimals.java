@@ -7,15 +7,15 @@ import java.awt.*;
 
 public enum EAnimals {
 
-    FOX(new ImageIcon("src/main/resources/lis.jpg")),
-    BIGDOG(new ImageIcon("src/main/resources/duzypies.jpg")),
-    HORSE(new ImageIcon("src/main/resources/kon.jpg")),
-    COW(new ImageIcon("src/main/resources/krowa.jpg")),
-    PIG(new ImageIcon("src/main/resources/swinka.jpg")),
-    SHEEP(new ImageIcon("src/main/resources/owca.jpg")),
-    RABBIT(new ImageIcon("src/main/resources/krolik.jpg")),
-    SMALLDOG(new ImageIcon("src/main/resources/malypies.jpg")),
-    WOLF(new ImageIcon("src/main/resources/wilk.jpg"));
+    FOX(new ImageIcon("GraFarma/src/main/resources/lis.jpg")),
+    BIGDOG(new ImageIcon("GraFarma/src/main/resources/duzypies.jpg")),
+    HORSE(new ImageIcon("GraFarma/src/main/resources/kon.jpg")),
+    COW(new ImageIcon("GraFarma/src/main/resources/krowa.jpg")),
+    PIG(new ImageIcon("GraFarma/src/main/resources/swinka.jpg")),
+    SHEEP(new ImageIcon("GraFarma/src/main/resources/owca.jpg")),
+    RABBIT(new ImageIcon("GraFarma/src/main/resources/krolik.jpg")),
+    SMALLDOG(new ImageIcon("GraFarma/src/main/resources/malypies.jpg")),
+    WOLF(new ImageIcon("GraFarma/src/main/resources/wilk.jpg"));
 
     private ImageIcon icon;
 
@@ -34,14 +34,14 @@ public enum EAnimals {
     }
 
     public static ImageIcon getWaterBear() {
-       ImageIcon waterBeart = new ImageIcon("src/main/resources/niesporczak.jpg");
+       ImageIcon waterBeart = new ImageIcon("GraFarma/src/main/resources/niesporczak.jpg");
        Image image = waterBeart.getImage();
        ImageIcon resWB = new ImageIcon(image.getScaledInstance(110,100,Image.SCALE_SMOOTH));
        return  resWB;
     }
 
     public static ImageIcon getDiceIcon() {
-        ImageIcon waterBeart = new ImageIcon("src/main/resources/dice.jpg");
+        ImageIcon waterBeart = new ImageIcon("GraFarma/src/main/resources/dice.jpg");
         Image image = waterBeart.getImage();
         ImageIcon resWB = new ImageIcon(image.getScaledInstance(110,100,Image.SCALE_SMOOTH));
         return  resWB;
