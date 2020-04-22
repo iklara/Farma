@@ -3,20 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2b65e640-93a0-42c0-a045-25b3dde2bb4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraFarma/GraFarma.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/GraFarma.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/EAnimals.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/EAnimals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/Background.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/MyJPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/backgroundImage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/PlaygroundPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/PlaygroundPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dice.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/resources/dice.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/duzypies.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/resources/duzypies.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/kon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/resources/kon.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/krolik.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/resources/krolik.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/krowa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/resources/krowa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/lis.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/resources/lis.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/malypies.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/resources/malypies.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/niesporczak.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/resources/niesporczak.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/owca.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/resources/owca.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/swinka.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/resources/swinka.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/wilk.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/resources/wilk.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/playground/PlaygroundPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/playground/PlaygroundPane.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +195,8 @@
       <workItem from="1587321180668" duration="8176000" />
       <workItem from="1587334856063" duration="989000" />
       <workItem from="1587335881547" duration="346000" />
-      <workItem from="1587391906747" duration="2271000" />
+      <workItem from="1587391906747" duration="3062000" />
+      <workItem from="1587543802023" duration="13990000" />
     </task>
     <servers />
   </component>
@@ -266,10 +258,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" width="1092" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583165321479" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1587329692476">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1587551641878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587329692476" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587551641878" />
     <state x="690" y="299" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1583166124045">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -286,6 +278,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="379" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1583266678173" />
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1587549820365">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587549820365" />
     <state x="707" y="376" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583165329214">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -298,22 +294,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583703124934" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1587492604177">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1587588440754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587492604177" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1587492604177">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587588440754" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1587588440754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587492604177" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1587492604177">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587588440754" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1587588440754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587492604177" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1587492604177">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587588440754" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1587588440754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587492604177" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587588440754" />
     <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1583266394598">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -330,10 +326,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="298" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583266465158" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587391907798">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587545223785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587391907798" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587545223785" />
     <state x="1182" y="311" key="git4idea.merge.GitPullDialog" timestamp="1587335348287">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
