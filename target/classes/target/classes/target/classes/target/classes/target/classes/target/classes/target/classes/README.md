@@ -1,2 +1,0 @@
-# Farma
-game
