@@ -2,6 +2,8 @@ package playground;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -9,7 +11,6 @@ public class PlaygroundPane extends JPanel {
     @Override
     public Dimension getPreferredSize() {
         return new Dimension(800, 800);
-
     }
 
     AnimalLabel animalLabel;
@@ -17,12 +18,9 @@ public class PlaygroundPane extends JPanel {
     Random r = new Random();
     int animalDice1;
     int animalDice2;
-    JButton buttonBuy;
-    JButton buttonSell;
     JButton buttonThrowDice;
     JLabel labelFirstDice;
     JLabel labelSecondDice;
-
     ArrayList<ArrayList> herd = new ArrayList<>();
     ArrayList<AnimalLabel> rabbitsRow = new ArrayList<>();
     ArrayList<AnimalLabel> pigsRow = new ArrayList<>();
@@ -30,11 +28,9 @@ public class PlaygroundPane extends JPanel {
     ArrayList<AnimalLabel> cowRow = new ArrayList<>();
     ArrayList<AnimalLabel> horseRow = new ArrayList<>();
 
-
     int size = 105;
     int x = 480;
     int y = 480;
-
 
     public PlaygroundPane() {
         herd.add(rabbitsRow);
@@ -87,19 +83,12 @@ public class PlaygroundPane extends JPanel {
 
         buttonThrowDice.addActionListener(action -> {
 
-            for (ArrayList<AnimalLabel> a : herd) {
-                buy(a);
-            }
-            buy(rabbitsRow);
-            buy(sheepsRow);
-            buy(pigsRow);
-            buy(cowRow);
-            buy(horseRow);
+            buys(herd);
 
-            animalDice1 = 4;
-            animalDice2 = 4;
-//            animalDice1 = new Random().nextInt(8);
-//            animalDice2 = new Random().nextInt(8) + 1;
+            animalDice1 = 3;
+            animalDice2 = 3;
+//            animalDice1 = new Random().nextInt(4);
+//            animalDice2 = new Random().nextInt(4) + 1;
 
             labelFirstDice.setIcon(animalsList[animalDice1].getIconSize());
             labelSecondDice.setIcon(animalsList[animalDice2].getIconSize());
@@ -147,10 +136,7 @@ public class PlaygroundPane extends JPanel {
                         }
                         break;
                 }
-
-
             }
-
         });
 
         add(labelFirstDice);
@@ -158,27 +144,34 @@ public class PlaygroundPane extends JPanel {
 
     }
 
-    public void buy(ArrayList<AnimalLabel> arrayList) {
+    public void buys(ArrayList<ArrayList> herd) {
+
         JButton buttonBuy = new JButton();
-        buttonBuy.setText("Kup");
-        int counter = 0;
-        for (AnimalLabel a : arrayList) {
-            if (a.isFree() == false) {
-                counter++;
-            }
-            if (counter == arrayList.size()) {
-                add(buttonBuy);
-                buttonBuy.setBounds(120 + arrayList.get(0).getLabel().getX(), a.getLabel().getY(), 100, 50);
-                System.out.println("bene");
-            }
-            System.out.println(counter);
-        }
-
-    }
-
-    public void sell(ArrayList<AnimalLabel>arrayList){
         JButton buttonSell = new JButton();
+        buttonSell.setText("Sprzedaj");
+        buttonBuy.setText("Kup");
+        int buyCounter = 1;
 
+
+        for (ArrayList<AnimalLabel> hl : herd) {
+            int sellCounter = 0;
+            for (AnimalLabel al : hl) {
+
+                if (al.isFree() == false) {
+                    buyCounter++;
+                } else sellCounter++;
+
+                if (buyCounter == hl.size() && herd.size() > herd.indexOf(hl) + 1) {
+                    add(buttonBuy);
+                    buttonBuy.setBounds(120 + hl.get(0).getLabel().getX(), al.getLabel().getY(), 100, 40);
+                }
+                System.out.println(herd.indexOf(hl));
+                if (herd.indexOf(hl) > 0 && sellCounter > 0) {
+                    add(buttonSell);
+                    buttonSell.setBounds(120 + hl.get(0).getLabel().getX(), 50 + al.getLabel().getY(), 100, 40);
+                }
+            }
+        }
     }
 }
 
