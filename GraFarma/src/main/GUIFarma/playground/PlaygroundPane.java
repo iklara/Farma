@@ -83,12 +83,10 @@ public class PlaygroundPane extends JPanel {
 
         buttonThrowDice.addActionListener(action -> {
 
-            buys(herd);
-
-            animalDice1 = 3;
-            animalDice2 = 3;
-//            animalDice1 = new Random().nextInt(4);
-//            animalDice2 = new Random().nextInt(4) + 1;
+//animalDice2 =3;
+//animalDice1 =3;
+            animalDice1 = new Random().nextInt(8);
+            animalDice2 = new Random().nextInt(8) + 1;
 
             labelFirstDice.setIcon(animalsList[animalDice1].getIconSize());
             labelSecondDice.setIcon(animalsList[animalDice2].getIconSize());
@@ -96,6 +94,7 @@ public class PlaygroundPane extends JPanel {
                 switch (animalDice1) {
                     case 2:
                         horseRow.get(0).getLabel().setIcon(animalsList[animalDice1].getIconSize());
+                        horseRow.get(0).setFree(false);
                         break;
                     case 3:
                         for (AnimalLabel a : cowRow) {
@@ -137,6 +136,8 @@ public class PlaygroundPane extends JPanel {
                         break;
                 }
             }
+
+            buys(herd);
         });
 
         add(labelFirstDice);
@@ -146,33 +147,40 @@ public class PlaygroundPane extends JPanel {
 
     public void buys(ArrayList<ArrayList> herd) {
 
+
+
         JButton buttonBuy = new JButton();
         JButton buttonSell = new JButton();
         buttonSell.setText("Sprzedaj");
         buttonBuy.setText("Kup");
-        int buyCounter = 1;
-
 
         for (ArrayList<AnimalLabel> hl : herd) {
-            int sellCounter = 0;
+            int buyCounter = 0;
             for (AnimalLabel al : hl) {
 
                 if (al.isFree() == false) {
                     buyCounter++;
-                } else sellCounter++;
+                }
 
                 if (buyCounter == hl.size() && herd.size() > herd.indexOf(hl) + 1) {
                     add(buttonBuy);
                     buttonBuy.setBounds(120 + hl.get(0).getLabel().getX(), al.getLabel().getY(), 100, 40);
                 }
-                System.out.println(herd.indexOf(hl));
-                if (herd.indexOf(hl) > 0 && sellCounter > 0) {
+//                System.out.println("inex of hl " + herd.indexOf(hl)  + " buyCounter " + buyCounter+ " " + al.isFree());
+                if (al.isFree() == false) {
+                    System.out.println(herd.indexOf(hl) + " " + herd.size());
+                }
+
+                if (al.isFree ==false && herd.indexOf(hl) != 0) {
                     add(buttonSell);
                     buttonSell.setBounds(120 + hl.get(0).getLabel().getX(), 50 + al.getLabel().getY(), 100, 40);
+
                 }
+
             }
         }
     }
 }
+
 
 
