@@ -3,8 +3,11 @@ package playground;
 import javax.swing.*;
 
 public class AnimalLabel extends JPanel {
+
     JLabel label;
     boolean isFree;
+    String name;
+
 
     public AnimalLabel() {
         label = new JLabel();
@@ -26,6 +29,16 @@ public class AnimalLabel extends JPanel {
 
     public void setFree(boolean free) {
         isFree = free;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

@@ -4,7 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class PlaygroundPane extends JPanel {
@@ -21,12 +23,17 @@ public class PlaygroundPane extends JPanel {
     JButton buttonThrowDice;
     JLabel labelFirstDice;
     JLabel labelSecondDice;
-    ArrayList<ArrayList> herd = new ArrayList<>();
+    JButton buttonBuy;
+    JButton buttonSell;
+    ArrayList<ArrayList<AnimalLabel>> herd = new ArrayList<>();
     ArrayList<AnimalLabel> rabbitsRow = new ArrayList<>();
     ArrayList<AnimalLabel> pigsRow = new ArrayList<>();
     ArrayList<AnimalLabel> sheepsRow = new ArrayList<>();
     ArrayList<AnimalLabel> cowRow = new ArrayList<>();
     ArrayList<AnimalLabel> horseRow = new ArrayList<>();
+    String[] animalNames = new String[]{" królika", " owcę", " świnkę", " krowę", " konia"};
+    JButton[] buyButtonArray;
+    JButton[] sellButonArray;
 
     int size = 105;
     int x = 480;
@@ -83,10 +90,10 @@ public class PlaygroundPane extends JPanel {
 
         buttonThrowDice.addActionListener(action -> {
 
-//animalDice2 =3;
-//animalDice1 =3;
-            animalDice1 = new Random().nextInt(8);
-            animalDice2 = new Random().nextInt(8) + 1;
+            animalDice1 = 3;
+            animalDice2 = 3;
+//            animalDice1 = new Random().nextInt(8);
+//            animalDice2 = new Random().nextInt(8) + 1;
 
             labelFirstDice.setIcon(animalsList[animalDice1].getIconSize());
             labelSecondDice.setIcon(animalsList[animalDice2].getIconSize());
@@ -145,14 +152,9 @@ public class PlaygroundPane extends JPanel {
 
     }
 
-    public void buys(ArrayList<ArrayList> herd) {
-
-
-
-        JButton buttonBuy = new JButton();
-        JButton buttonSell = new JButton();
-        buttonSell.setText("Sprzedaj");
-        buttonBuy.setText("Kup");
+    public void buys(ArrayList<ArrayList<AnimalLabel>> herd) {
+        buyButtonArray = new JButton[herd.size()];
+        sellButonArray = new JButton[herd.size()];
 
         for (ArrayList<AnimalLabel> hl : herd) {
             int buyCounter = 0;
@@ -161,26 +163,40 @@ public class PlaygroundPane extends JPanel {
                 if (al.isFree() == false) {
                     buyCounter++;
                 }
-
                 if (buyCounter == hl.size() && herd.size() > herd.indexOf(hl) + 1) {
-                    add(buttonBuy);
-                    buttonBuy.setBounds(120 + hl.get(0).getLabel().getX(), al.getLabel().getY(), 100, 40);
-                }
-//                System.out.println("inex of hl " + herd.indexOf(hl)  + " buyCounter " + buyCounter+ " " + al.isFree());
-                if (al.isFree() == false) {
-                    System.out.println(herd.indexOf(hl) + " " + herd.size());
+                    add(buttonBuy = new JButton("Kup" + animalNames[herd.indexOf(hl) + 1]));
+                    buttonBuy.setName(String.valueOf(herd.indexOf(hl)));
+                    buttonBuy.setBounds(120 + hl.get(0).getLabel().getX(), al.getLabel().getY(), 150, 40);
+                    buyButtonArray[herd.indexOf(hl)] = buttonBuy;
+
                 }
 
-                if (al.isFree ==false && herd.indexOf(hl) != 0) {
-                    add(buttonSell);
-                    buttonSell.setBounds(120 + hl.get(0).getLabel().getX(), 50 + al.getLabel().getY(), 100, 40);
+                if (al.isFree == false && herd.indexOf(hl) != 0) {
+
+                    add(buttonSell = new JButton("Sprzedaj" + animalNames[herd.indexOf(hl)]));
+                    buttonSell.setName(String.valueOf(herd.indexOf(hl)));
+                    buttonSell.setBounds(120 + hl.get(0).getLabel().getX(), 50 + al.getLabel().getY(), 150, 40);
+                    sellButonArray[herd.indexOf(hl)] = buttonSell;
+
+                    buttonSell.addActionListener(aciton -> {
+                        if (herd.get(herd.indexOf(hl) - 1).get(0).isFree == true) ;
+                        for (AnimalLabel animal : herd.get(herd.indexOf(hl) - 1)) {
+                            animal.getLabel().setIcon(animalsList[herd.indexOf(hl) - 1].getIconSize());
+                            animal.setFree(false);
+                        }
+
+                    });
 
                 }
 
             }
         }
+
     }
+
+
 }
+
 
 
 
