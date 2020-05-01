@@ -46,6 +46,7 @@ public class PlaygroundPane extends JPanel {
         herd.add(cowRow);
         herd.add(horseRow);
 
+
         setLayout(null);
         for (int i = 0; i < 5; i++) {
             for (int j = i; j < 5; j++) {
@@ -145,6 +146,7 @@ public class PlaygroundPane extends JPanel {
             }
 
             buys(herd);
+
         });
 
         add(labelFirstDice);
@@ -169,6 +171,27 @@ public class PlaygroundPane extends JPanel {
                     buttonBuy.setBounds(120 + hl.get(0).getLabel().getX(), al.getLabel().getY(), 150, 40);
                     buyButtonArray[herd.indexOf(hl)] = buttonBuy;
 
+                    buttonBuy.addActionListener(action ->{
+                        if (hl.get(hl.size()-1).isFree()==false){
+
+                            for (AnimalLabel animal : herd.get(herd.indexOf(hl)+1)) {
+
+                                switch (herd.indexOf(hl)+1){
+
+                                    case 1:
+                                        for (int i =0 ; i<herd.indexOf(hl)+1;i++) {
+                                            animal.getLabel().setIcon(animalsList[6].getIconSize());
+                                            animal.setFree(false);
+                                            break;
+                                        }
+                                        break;
+                                }
+
+                            }
+
+                        }
+                    });
+
                 }
 
                 if (al.isFree == false && herd.indexOf(hl) != 0) {
@@ -178,12 +201,43 @@ public class PlaygroundPane extends JPanel {
                     buttonSell.setBounds(120 + hl.get(0).getLabel().getX(), 50 + al.getLabel().getY(), 150, 40);
                     sellButonArray[herd.indexOf(hl)] = buttonSell;
 
+
                     buttonSell.addActionListener(aciton -> {
-                        if (herd.get(herd.indexOf(hl) - 1).get(0).isFree == true) ;
-                        for (AnimalLabel animal : herd.get(herd.indexOf(hl) - 1)) {
-                            animal.getLabel().setIcon(animalsList[herd.indexOf(hl) - 1].getIconSize());
-                            animal.setFree(false);
-                        }
+                        if (herd.get(herd.indexOf(hl) - 1).get(0).isFree == true) {
+                            for (AnimalLabel animal : herd.get(herd.indexOf(hl) - 1)) {
+
+                                switch (herd.indexOf(hl) - 1) {
+                                    case 0:
+                                        animal.getLabel().setIcon(animalsList[6].getIconSize());
+                                        animal.setFree(false);
+                                        break;
+                                    case 1:
+                                        animal.getLabel().setIcon(animalsList[5].getIconSize());
+                                        animal.setFree(false);
+                                        break;
+                                    case 2:
+                                        animal.getLabel().setIcon(animalsList[4].getIconSize());
+                                        animal.setFree(false);
+                                        break;
+                                    case 3:
+                                        animal.getLabel().setIcon(animalsList[3].getIconSize());
+                                        animal.setFree(false);
+                                        break;
+                                    case 4:
+                                        animal.getLabel().setIcon(animalsList[2].getIconSize());
+                                        animal.setFree(false);
+                                        break;
+                                }
+
+                                for (int i = hl.size() - 1; i >= 0; i--) {
+                                    hl.get(i).setFree(true);
+                                    hl.get(i).getLabel().setIcon(EAnimals.getWaterBear());
+                                    buys(herd);
+                                    break;
+                                }
+
+                            }
+                        } else JOptionPane.showMessageDialog(this, "nie masz miejsca w zagrodzie");
 
                     });
 
