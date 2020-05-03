@@ -15,6 +15,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -47,6 +48,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -61,15 +63,15 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/SwingMain.java" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projekty IntelliJ\FarmaIP02032020\Farma\GraFarma\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="GUIFarma" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projekty IntelliJ\FarmaIP02032020\Farma\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Projekty IntelliJ\FarmaIP02032020\Farma\GraFarma\src\main\resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.SwingMain (1)">
@@ -198,7 +200,8 @@
       <workItem from="1587810273198" duration="4000" />
       <workItem from="1587927504324" duration="1573000" />
       <workItem from="1588179178726" duration="14184000" />
-      <workItem from="1588336848045" duration="12240000" />
+      <workItem from="1588336848045" duration="12379000" />
+      <workItem from="1588509820654" duration="13847000" />
     </task>
     <servers />
   </component>
@@ -300,22 +303,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583703124934" />
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1588368248341">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom" timestamp="1588533282917">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588368248341" />
-    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1588368248341">
+    <state width="1877" height="351" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588533282917" />
+    <state width="1877" height="351" key="GridCell.Tab.0.center" timestamp="1588533282916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588368248341" />
-    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1588368248341">
+    <state width="1877" height="351" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588533282916" />
+    <state width="1877" height="351" key="GridCell.Tab.0.left" timestamp="1588533282916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588368248341" />
-    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1588368248341">
+    <state width="1877" height="351" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588533282916" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right" timestamp="1588533282917">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588368248341" />
+    <state width="1877" height="351" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588533282917" />
     <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1588185998904">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -332,10 +335,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="298" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583266465158" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588336873348">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588509886064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588336873348" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588509886064" />
     <state x="1182" y="311" key="git4idea.merge.GitPullDialog" timestamp="1587335348287">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -348,9 +351,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588181453183" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588185647207">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588519177445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588185647207" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588519177445" />
   </component>
 </project>
