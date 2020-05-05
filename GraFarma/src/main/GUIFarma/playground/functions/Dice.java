@@ -5,12 +5,13 @@ import playground.EAnimals;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 import static playground.PlaygroundPane.*;
 
 public class Dice extends JPanel {
-  Buy b;
-  Sell s;
+    Buy b = new Buy();
+    Sell s = new Sell();
     JButton buttonThrowDice;
     JLabel labelFirstDice;
     JLabel labelSecondDice;
@@ -37,66 +38,112 @@ public class Dice extends JPanel {
 
         buttonThrowDice.addActionListener(action ->
         {
-            b = new Buy();
-            s = new Sell();
-            animalDice1 = 4;
-            animalDice2 = 4;
-//            animalDice1 = new Random().nextInt(8);
-//            animalDice2 = new Random().nextInt(8) + 1;
+//            animalDice1 = 4;
+//            animalDice2 = 4;
+            animalDice1 = new Random().nextInt(8);
+            animalDice2 = new Random().nextInt(8) + 1;
             labelFirstDice.setIcon(animalsList[animalDice1].getIconSize());
             labelSecondDice.setIcon(animalsList[animalDice2].getIconSize());
+
             if (animalDice1 == animalDice2) {
-                switch (animalDice1) {
-                    case 2:
-                        horseRow.get(0).getLabel().setIcon(animalsList[animalDice1].getIconSize());
-                        horseRow.get(0).setFree(false);
-                        break;
-                    case 3:
-                        for (AnimalLabel a : cowRow) {
-                            if (a.isFree() == true) {
-                                a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
-                                a.setFree(false);
-                                break;
-                            }
-                        }
-                        break;
+                sameValueOnDice(animalDice1);
+            } else notSameValueOnDice(animalDice1, animalDice2);
 
-                    case 4:
-                        for (AnimalLabel a : pigsRow) {
-                            if (a.isFree() == true) {
-                                a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
-                                a.setFree(false);
-                                break;
-                            }
-                        }
-                        break;
-
-                    case 5:
-                        for (AnimalLabel a : sheepsRow) {
-                            if (a.isFree() == true) {
-                                a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
-                                a.setFree(false);
-                                break;
-                            }
-                        }
-                        break;
-                    case 6:
-                        for (AnimalLabel a : rabbitsRow) {
-                            if (a.isFree() == true) {
-                                a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
-                                a.setFree(false);
-                                break;
-                            }
-                        }
-                        break;
-                }
-            }
             b.buy(pane, herd);
             s.sell(pane, herd);
-
         });
-
         pane.add(labelFirstDice);
         pane.add(labelSecondDice);
+    }
+
+
+    public void notSameValueOnDice(int animalDice1, int animalDice2) {
+
+        if ((animalDice1 == 3 || animalDice2 == 3)) {
+
+            for (AnimalLabel a : cowRow) {
+                if (a.isFree() == false) {
+                    continue;
+                }
+                a.getLabel().setIcon(animalsList[3].getIconSize());
+                a.setFree(false);
+                break;
+            }
+        } else if ((animalDice1 == 4 || animalDice2 == 4)) {
+            for (AnimalLabel a : pigsRow) {
+                if (a.isFree() == false) {
+                    continue;
+                }
+                a.getLabel().setIcon(animalsList[4].getIconSize());
+                a.setFree(false);
+                break;
+            }
+        } else if ((animalDice1 == 5 || animalDice2 == 5)) {
+            for (AnimalLabel a : sheepsRow) {
+                if (a.isFree() == false) {
+                    continue;
+                }
+                a.getLabel().setIcon(animalsList[5].getIconSize());
+                a.setFree(false);
+                break;
+            }
+        } else if ((animalDice1 == 6 || animalDice2 == 6)) {
+            for (AnimalLabel a : rabbitsRow) {
+                if (a.isFree() == false) {
+                    continue;
+                }
+                a.getLabel().setIcon(animalsList[6].getIconSize());
+                a.setFree(false);
+                break;
+            }
+
+        }
+    }
+
+
+    public void sameValueOnDice(int animalDice1) {
+        switch (animalDice1) {
+            case 2:
+                horseRow.get(0).getLabel().setIcon(animalsList[animalDice1].getIconSize());
+                horseRow.get(0).setFree(false);
+                break;
+            case 3:
+                for (AnimalLabel a : cowRow) {
+                    if (a.isFree() == true) {
+                        a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
+                        a.setFree(false);
+                        break;
+                    }
+                }
+                break;
+            case 4:
+                for (AnimalLabel a : pigsRow) {
+                    if (a.isFree() == true) {
+                        a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
+                        a.setFree(false);
+                        break;
+                    }
+                }
+                break;
+
+            case 5:
+                for (AnimalLabel a : sheepsRow) {
+                    if (a.isFree() == true) {
+                        a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
+                        a.setFree(false);
+                        break;
+                    }
+                }
+                break;
+            case 6:
+                for (AnimalLabel a : rabbitsRow) {
+                    if (a.isFree() == true) {
+                        a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
+                        a.setFree(false);
+                        break;
+                    }
+                }
+                break;
+        }
     }
 }

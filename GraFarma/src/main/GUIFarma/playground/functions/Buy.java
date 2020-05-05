@@ -8,6 +8,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+import static playground.PlaygroundPane.*;
+
 public class Buy extends JPanel {
 
     AnimalLabel animalLabel;
@@ -21,6 +23,7 @@ public class Buy extends JPanel {
     }
 
     public void buy(JPanel pane, ArrayList<ArrayList<AnimalLabel>> herd) {
+        s = new Sell();
         buyButtonArray = new JButton[herd.size()];
         for (ArrayList<AnimalLabel> hl : herd) {
             int buyCounter = 0;
@@ -35,45 +38,52 @@ public class Buy extends JPanel {
                     buyButtonArray[herd.indexOf(hl)] = buttonBuy;
 
                     buttonBuy.addActionListener(action -> {
-                        s = new Sell();
+
                         if (hl.get(hl.size() - 1).isFree() == false && herd.get(herd.indexOf(hl) + 1).get(herd.get(herd.indexOf(hl) + 1).size() - 1).isFree() == true) {
-
-                            for (AnimalLabel animal : herd.get(herd.indexOf(hl) + 1)) {
-
-                                switch (herd.indexOf(hl) + 1) {
-
-                                    case 1:
-                                        for (int i = 0; i < herd.indexOf(hl) + 1; i++) {
-                                            animal.getLabel().setIcon(animalsList[5].getIconSize());
-                                            animal.setFree(false);
-
+                            switch (herd.indexOf(hl) + 1) {
+                                case 1:
+                                    for (int i = 0; i < sheepsRow.size(); i++) {
+                                        if (sheepsRow.get(i).isFree() == true) {
+                                            sheepsRow.get(i).getLabel().setIcon(animalsList[5].getIconSize());
+                                            sheepsRow.get(i).setFree(false);
+                                            break;
                                         }
-                                        break;
-                                    case 2:
-                                        for (int i = 0; i < herd.indexOf(hl) + 1; i++) {
-                                            animal.getLabel().setIcon(animalsList[4].getIconSize());
-                                            animal.setFree(false);
+                                    }
+                                    break;
+                                case 2:
+                                    System.out.println("Swinka");
+                                    for (int i = 0; i < pigsRow.size(); i++) {
+                                        if (pigsRow.get(i).isFree() == true) {
+                                            pigsRow.get(i).getLabel().setIcon(animalsList[4].getIconSize());
+                                            pigsRow.get(i).setFree(false);
+                                            break;
                                         }
-                                        break;
+                                    }
+                                    break;
+                                case 3:
+                                    System.out.println("Krowa");
+                                    for (int i = 0; i < cowRow.size(); i++) {
+                                        if (cowRow.get(i).isFree() == true) {
+                                            cowRow.get(i).getLabel().setIcon(animalsList[3].getIconSize());
+                                            cowRow.get(i).setFree(false);
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                case 4:
+                                    for (int i = 0; i < horseRow.size(); i++) {
+                                        if (horseRow.get(i).isFree() == true) {
+                                            horseRow.get(i).getLabel().setIcon(animalsList[2].getIconSize());
+                                            horseRow.get(i).setFree(false);
+                                            break;
+                                        }
 
-                                    case 3:
-                                        for (int i = 0; i < herd.indexOf(hl) + 1; i++) {
-                                            animal.getLabel().setIcon(animalsList[3].getIconSize());
-                                            animal.setFree(false);
-                                        }
-                                        break;
-
-                                    case 4:
-                                        for (int i = 0; i < herd.indexOf(hl) + 1; i++) {
-                                            animal.getLabel().setIcon(animalsList[2].getIconSize());
-                                            animal.setFree(false);
-                                        }
-                                        break;
-                                }
-                                for (int i = hl.size() - 1; i >= 0; i--) {
-                                    hl.get(i).setFree(true);
-                                    hl.get(i).getLabel().setIcon(EAnimals.getWaterBear());
-                                }
+                                    }
+                                    break;
+                            }
+                            for (int i = hl.size() - 1; i >= 0; i--) {
+                                hl.get(i).setFree(true);
+                                hl.get(i).getLabel().setIcon(EAnimals.getWaterBear());
                             }
                         } else if (herd.get(herd.indexOf(hl) + 1).get(herd.get(herd.indexOf(hl) + 1).size() - 1).isFree() == false) {
                             JOptionPane.showMessageDialog(this, "chcesz kupić a nie masz miejsca dla swojego zwierzaka");
@@ -82,7 +92,9 @@ public class Buy extends JPanel {
                         }
                         s.sell(pane, herd);
                         buy(pane, herd);
+
                     });
+                    ;
                 }
             }
         }

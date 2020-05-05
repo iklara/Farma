@@ -7,17 +7,19 @@ import playground.functions.Sell;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+
 public class PlaygroundPane extends JPanel {
     @Override
     public Dimension getPreferredSize() {
         return new Dimension(800, 800);
     }
+
     Buy b = new Buy();
     Sell s = new Sell();
     Dice d = new Dice();
     AnimalLabel animalLabel;
     EAnimals[] animalsList = EAnimals.values();
-    ArrayList<ArrayList<AnimalLabel>> herd = new ArrayList<>();
+    public static ArrayList<ArrayList<AnimalLabel>> herd = new ArrayList<>();
     public static ArrayList<AnimalLabel> rabbitsRow = new ArrayList<>();
     public static ArrayList<AnimalLabel> pigsRow = new ArrayList<>();
     public static ArrayList<AnimalLabel> sheepsRow = new ArrayList<>();
@@ -27,6 +29,7 @@ public class PlaygroundPane extends JPanel {
     int size = 105;
     int x = 480;
     int y = 480;
+
     public PlaygroundPane() {
         herd.add(rabbitsRow);
         herd.add(sheepsRow);
@@ -74,11 +77,7 @@ public class PlaygroundPane extends JPanel {
                 }
             }
         }
-        d.throwDice(this,herd);
+        d.throwDice(this, herd);
 
     }
 };
-
-
-
-
