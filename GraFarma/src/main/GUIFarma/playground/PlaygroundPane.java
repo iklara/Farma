@@ -14,9 +14,9 @@ public class PlaygroundPane extends JPanel {
         return new Dimension(800, 800);
     }
 
-    Buy b = new Buy();
-    Sell s = new Sell();
-    Dice d = new Dice();
+    Buy b;
+    Sell s;
+    Dice d;
     AnimalLabel animalLabel;
     EAnimals[] animalsList = EAnimals.values();
     public static ArrayList<ArrayList<AnimalLabel>> herd = new ArrayList<>();
@@ -31,6 +31,9 @@ public class PlaygroundPane extends JPanel {
     int y = 480;
 
     public PlaygroundPane() {
+        b = new Buy();
+        s = new Sell();
+        d = new Dice();
         herd.add(rabbitsRow);
         herd.add(sheepsRow);
         herd.add(pigsRow);
@@ -80,4 +83,5 @@ public class PlaygroundPane extends JPanel {
         d.throwDice(this, herd);
 
     }
-};
+}
+

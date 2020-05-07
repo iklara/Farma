@@ -43,6 +43,7 @@ public class Buy extends JPanel {
                             switch (herd.indexOf(hl) + 1) {
                                 case 1:
                                     for (int i = 0; i < sheepsRow.size(); i++) {
+                                        System.out.println("Owca");
                                         if (sheepsRow.get(i).isFree() == true) {
                                             sheepsRow.get(i).getLabel().setIcon(animalsList[5].getIconSize());
                                             sheepsRow.get(i).setFree(false);
@@ -92,9 +93,7 @@ public class Buy extends JPanel {
                         }
                         s.sell(pane, herd);
                         buy(pane, herd);
-
                     });
-                    ;
                 }
             }
         }

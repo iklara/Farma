@@ -65,6 +65,9 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/SwingMain.java" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projekty IntelliJ\FarmaIP02032020\Farma\GraFarma\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="GUIFarma" />
@@ -72,9 +75,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Projekty IntelliJ\FarmaIP02032020\Farma\src\main\resources" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Projekty IntelliJ\FarmaIP02032020\Farma\GraFarma\src\main\resources" />
-    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="false" />
+    </option>
   </component>
   <component name="RunManager" selected="Application.SwingMain (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -163,7 +168,6 @@
       <list>
         <item itemvalue="Application.SwingMain (1)" />
         <item itemvalue="Application.maintest" />
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.SetActionCommandForJButton" />
         <item itemvalue="Application.TestMain" />
       </list>
@@ -204,7 +208,9 @@
       <workItem from="1588179178726" duration="14184000" />
       <workItem from="1588336848045" duration="12379000" />
       <workItem from="1588509820654" duration="14488000" />
-      <workItem from="1588614328680" duration="22992000" />
+      <workItem from="1588614328680" duration="35167000" />
+      <workItem from="1588789068396" duration="11776000" />
+      <workItem from="1588868696046" duration="9201000" />
     </task>
     <servers />
   </component>
@@ -266,10 +272,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" width="1092" height="775" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583165321479" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1588641655502">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1588798468284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588641655502" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588798468284" />
     <state x="690" y="299" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1583166124045">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -310,22 +316,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583703124934" />
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom" timestamp="1588643708159">
+    <state width="1877" height="259" key="GridCell.Tab.0.bottom" timestamp="1588883253380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588643708159" />
-    <state width="1877" height="218" key="GridCell.Tab.0.center" timestamp="1588643708159">
+    <state width="1877" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588883253380" />
+    <state width="1877" height="259" key="GridCell.Tab.0.center" timestamp="1588883253380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588643708159" />
-    <state width="1877" height="218" key="GridCell.Tab.0.left" timestamp="1588643708159">
+    <state width="1877" height="259" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588883253380" />
+    <state width="1877" height="259" key="GridCell.Tab.0.left" timestamp="1588883253380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588643708159" />
-    <state width="1877" height="218" key="GridCell.Tab.0.right" timestamp="1588643708159">
+    <state width="1877" height="259" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588883253380" />
+    <state width="1877" height="259" key="GridCell.Tab.0.right" timestamp="1588883253380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588643708159" />
+    <state width="1877" height="259" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588883253380" />
     <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1588185998904">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -342,10 +348,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="298" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583266465158" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588614330242">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588868730112">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588614330242" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588868730112" />
     <state x="690" y="286" width="540" height="468" key="extract.method.dialog" timestamp="1588622630793">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -358,10 +364,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="342" y="215" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1587931125177" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1588181453183">
+    <state x="702" y="139" key="refactoring.ChangeSignatureDialog" timestamp="1588797611419">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588181453183" />
+    <state x="702" y="139" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588797611419" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1588880047656">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588880047656" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588641699239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
