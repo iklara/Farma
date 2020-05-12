@@ -1,5 +1,6 @@
 package playground;
 
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -8,13 +9,13 @@ import java.awt.*;
 public enum EAnimals {
 
     FOX(new ImageIcon("GraFarma/src/main/resources/lis.jpg")),
-    BIGDOG(new ImageIcon("GraFarma/src/main/resources/duzypies.jpg")),
+    SMALLDOG(new ImageIcon("GraFarma/src/main/resources/malypies.jpg")),
     HORSE(new ImageIcon("GraFarma/src/main/resources/kon.jpg")),
     COW(new ImageIcon("GraFarma/src/main/resources/krowa.jpg")),
     PIG(new ImageIcon("GraFarma/src/main/resources/swinka.jpg")),
     SHEEP(new ImageIcon("GraFarma/src/main/resources/owca.jpg")),
     RABBIT(new ImageIcon("GraFarma/src/main/resources/krolik.jpg")),
-    SMALLDOG(new ImageIcon("GraFarma/src/main/resources/malypies.jpg")),
+    BIGDOG(new ImageIcon("GraFarma/src/main/resources/duzypies.jpg")),
     WOLF(new ImageIcon("GraFarma/src/main/resources/wilk.jpg"));
 
     private ImageIcon icon;
