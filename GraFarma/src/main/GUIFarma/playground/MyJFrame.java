@@ -1,7 +1,7 @@
 
 import playground.PlaygroundPane;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 import java.awt.*;
 
 
@@ -15,6 +15,9 @@ public class MyJFrame extends JFrame {
         setTitle("Witaj na Farmie");
         Image icon = Toolkit.getDefaultToolkit().getImage("GraFarma/src/main/resources/foxS.png");
         setIconImage(icon);
+//        setBackground(Color.GREEN);
+
+
 
 //        add(new EkranPowitalny());
   // add(new MyJPanel2());

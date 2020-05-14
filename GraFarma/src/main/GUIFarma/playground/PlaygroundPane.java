@@ -48,6 +48,7 @@ public class PlaygroundPane extends JPanel {
     public PlaygroundPane() {
         b = new Buy();
         s = new Sell();
+        setBackground(Color.getHSBColor(51,102,0));
 
         herd.add(rabbitsRow);
         herd.add(sheepsRow);
