@@ -13,7 +13,7 @@ Zwierzęta można wymieniać zgodnie z ponizsza tabela:
 2 swinie - 1 krowa lub kon
 2 owce - 1 maly pies
 2 swinie - 1 duzy pies
-Jeśli gracz wyrzuci lisa, to traci na rzecz stada wszystkie posiadane króliki.
+Jeśli gracz wyrzuci lisa, to traci na rzecz stada wszystkie posiadane króliki. 
 Jeśli wyrzuci wilka, traci wszystkie posiadane zwierzęta, z wyjątkiem konia i małego psa, jeśli je ma.
 Jeżeli gracz wyrzucił wilka i lisa, ma małego psa, ale nie posiada dużego, to traci wszystkie zwierzęta poza koniem.
 Od straty wynikającej z wyrzucenia lisa chroni gracza mały pies. Jeżeli gracz wyrzuci lisa, a ma małego psa, to jego zwierzęta pozostają nietknięte do stada wraca jedynie mały pies.
@@ -24,7 +24,7 @@ koniec gry: gdy gracz stracil stado (zwierzeta hodowlana poza psami) / wygrywa p
 Programy wykorzystane: Java8
 Muzyka  - www.bendsound.com free licences
 
-Gra uruchamia sie - Start.java
+Gra uruchamia sie - SwingMain.java
 
 Gra powstala na potrzeby bootcampu prowadzonego przez firme Connectis www.connectis.pl jako zaliczenie projektu "Programator" pod kuratela Piotr Wrony.
 
