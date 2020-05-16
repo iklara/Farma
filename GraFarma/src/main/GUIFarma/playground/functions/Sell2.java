@@ -30,27 +30,27 @@ public class Sell2 extends JPanel {
                     sellButtonArray2[herd2.indexOf(hl2)] = buttonSell2;
                     buttonSell2.addActionListener(aciton -> {
                         if (herd2.get(herd2.indexOf(hl2) - 1).get(0).isFree() == true && herd2.get(herd2.indexOf(hl2)).get(0).isFree() == false) {
-                            for (AnimalLabel animal : herd2.get(herd2.indexOf(hl2) - 1)) {
+                            for (AnimalLabel animal2 : herd2.get(herd2.indexOf(hl2) - 1)) {
                                 switch (herd2.indexOf(hl2) - 1) {
                                     case 0:
-                                        animal.getLabel().setIcon(animalsList[6].getIconSize());
-                                        animal.setFree(false);
+                                        animal2.getLabel().setIcon(animalsList[6].getIconSize());
+                                        animal2.setFree(false);
                                         break;
                                     case 1:
-                                        animal.getLabel().setIcon(animalsList[5].getIconSize());
-                                        animal.setFree(false);
+                                        animal2.getLabel().setIcon(animalsList[5].getIconSize());
+                                        animal2.setFree(false);
                                         break;
                                     case 2:
-                                        animal.getLabel().setIcon(animalsList[4].getIconSize());
-                                        animal.setFree(false);
+                                        animal2.getLabel().setIcon(animalsList[4].getIconSize());
+                                        animal2.setFree(false);
                                         break;
                                     case 3:
-                                        animal.getLabel().setIcon(animalsList[3].getIconSize());
-                                        animal.setFree(false);
+                                        animal2.getLabel().setIcon(animalsList[3].getIconSize());
+                                        animal2.setFree(false);
                                         break;
                                     case 4:
-                                        animal.getLabel().setIcon(animalsList[2].getIconSize());
-                                        animal.setFree(false);
+                                        animal2.getLabel().setIcon(animalsList[2].getIconSize());
+                                        animal2.setFree(false);
                                         break;
                                 }
                             }

@@ -15,13 +15,13 @@ public class Buy2 extends JPanel {
     String[] animalNames = new String[]{" królika", " owcę", " świnkę", " krowę", " konia"};
     EAnimals[] animalsList = EAnimals.values();
     JButton[] buyButtonArray2;
-    Sell s2;
+    Sell2 s2;
 
     public Buy2() {
     }
 
-    public void buy2(JPanel pane2, ArrayList<ArrayList<AnimalLabel>> herd2) {
-        s2 = new Sell();
+    public void buy2 (JPanel pane2, ArrayList<ArrayList<AnimalLabel>> herd2) {
+        s2 = new Sell2();
         buyButtonArray2 = new JButton[herd2.size()];
         for (ArrayList<AnimalLabel> hl2 : herd2) {
             int buyCounter = 0;
@@ -89,7 +89,7 @@ public class Buy2 extends JPanel {
                         } else if (hl2.get(hl2.size() - 1).isFree() == true) {
                             JOptionPane.showMessageDialog(this, "za mało zwierzątek do handlu");
                         }
-                        s2.sell(pane2, herd2);
+                        s2.sell2(pane2, herd2);
                         buy2(pane2, herd2);
                     });
                 }

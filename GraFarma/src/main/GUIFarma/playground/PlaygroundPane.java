@@ -120,9 +120,9 @@ public class PlaygroundPane extends JPanel {
         buttonReset2.addActionListener(e -> {
             for (ArrayList<AnimalLabel> animalList : herd2) {
 
-                for (AnimalLabel animalLabel2 : animalList) {
-                    animalLabel2.setFree(true);
-                    animalLabel2.getLabel().setIcon(EAnimals.getWaterBear());
+                for (AnimalLabel animalLabel: animalList) {
+                    animalLabel.setFree(true);
+                    animalLabel.getLabel().setIcon(EAnimals.getWaterBear());
                     System.out.println(animalsList.length + " wiersz ");
                 }
             }
@@ -130,27 +130,27 @@ public class PlaygroundPane extends JPanel {
         add(buttonReset2);
         for (int i = 0; i < 5; i++) {
             for (int j = i; j < 5; j++) {
-                animalLabel2 = new AnimalLabel();
-                animalLabel2.getLabel().setBounds(x1 - (j * (size1 + 10) - i * 50), y1 - (i * size), size, size);
-                add(animalLabel2.getLabel());
+                animalLabel = new AnimalLabel();
+                animalLabel.getLabel().setBounds(x1 - (j * (size1 + 10) - i * 50), y1 - (i * size), size, size);
+                add(animalLabel.getLabel());
                 switch (i) {
                     case 0:
-                        rabbitsRow2.add(animalLabel2);
+                        rabbitsRow2.add(animalLabel);
                         break;
                     case 1:
-                        sheepsRow2.add(animalLabel2);
+                        sheepsRow2.add(animalLabel);
 
                         break;
                     case 2:
-                        pigsRow2.add(animalLabel2);
+                        pigsRow2.add(animalLabel);
 
                         break;
                     case 3:
-                        cowRow2.add(animalLabel2);
+                        cowRow2.add(animalLabel);
 
                         break;
                     case 4:
-                        horseRow2.add(animalLabel2);
+                        horseRow2.add(animalLabel);
                         break;
                 }
 
