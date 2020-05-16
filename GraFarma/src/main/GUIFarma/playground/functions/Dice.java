@@ -11,6 +11,8 @@ import java.util.Random;
 
 import static playground.PlaygroundPane.*;
 
+
+//Gra 1 szy gracz
 public class Dice extends JPanel {
 
     AnimalLabel smallDog = new AnimalLabel();
@@ -32,89 +34,114 @@ public class Dice extends JPanel {
     int animalDice2;
     EAnimals[] animalsList = EAnimals.values();
 
+
+
+
     public Dice() {
     }
 
     public void throwDice(JPanel pane, ArrayList<ArrayList<AnimalLabel>> herd) {
 
-        labelBigDog.setIcon(EAnimals.BIGDOG.getIconSize());
-        labelBigDog.setBounds(380, 600, 100, 100);
+
+            smallDog.getLabel().setIcon(EAnimals.SMALLDOG.getIconSize());
+            bigDog.getLabel().setIcon(EAnimals.BIGDOG.getIconSize());
+
+            labelBigDog.setIcon(EAnimals.BIGDOG.getIconSize());
+            labelBigDog.setBounds(550, 750, 100, 100);
 
 
-        labelSmallDog.setIcon(EAnimals.SMALLDOG.getIconSize());
-        labelSmallDog.setBounds(490, 600, 100, 100);
+            labelSmallDog.setIcon(EAnimals.SMALLDOG.getIconSize());
+            labelSmallDog.setBounds(430, 750, 100, 100);
 
-        if (bigDog.isFree() == false) {
-            labelBigDog.setVisible(true);
-        } else {
-            labelBigDog.setVisible(false);
-        }
-
-        if (smallDog.isFree() == false) {
-            labelSmallDog.setVisible(true);
-        } else {
-            labelSmallDog.setVisible(false);
-        }
-
-
-        labelFirstDice.setBounds(160, 600, 100, 100);
-        labelSecondDice.setBounds(270, 600, 100, 100);
-
-        buttonThrowDice.setText("Throw Dice");
-        buttonThrowDice.setBounds(50, 600, 100, 100);
-        buttonThrowDice.setIcon(EAnimals.getDiceIcon());
-
-        buttonDice1.setBounds(160, 710, 100, 50);
-        buttonDice1.setVisible(false);
-        buttonDice1.addActionListener(e -> {
-            notSameValueOnDice(pane, animalDice1);
-            buttonDice1.setVisible(false);
-            buttonDice2.setVisible(false);
-        });
-
-
-        buttonDice2.setBounds(270, 710, 100, 50);
-        buttonDice2.setVisible(false);
-        buttonDice2.addActionListener(e -> {
-            notSameValueOnDice(pane, animalDice2);
-            buttonDice1.setVisible(false);
-            buttonDice2.setVisible(false);
-        });
-
-
-        pane.add(labelBigDog);
-        pane.add(labelSmallDog);
-        pane.add(buttonDice1);
-        pane.add(buttonDice2);
-        pane.add(buttonThrowDice);
-
-        buttonThrowDice.addActionListener(action ->
-        {
-//            animalDice1 = 0;
-//            animalDice2 = 8;
-            animalDice1 = new Random().nextInt(8);
-            animalDice2 = new Random().nextInt(8) + 1;
-            labelFirstDice.setIcon(animalsList[animalDice1].getIconSize());
-            labelSecondDice.setIcon(animalsList[animalDice2].getIconSize());
-
-
-            if (animalDice1 == animalDice2) {
-                sameValueOnDice(animalDice2);
-                buttonDice1.setVisible(false);
-                buttonDice2.setVisible(false);
-            } else if (animalDice1 == 0 || animalDice2 == 8) {
-                foxAndWolfs(animalDice1, animalDice2);
+            if (bigDog.isFree() == false) {
+                labelBigDog.setVisible(true);
             } else {
-                buttonDice1.setVisible(true);
-                buttonDice2.setVisible(true);
+                labelBigDog.setVisible(false);
             }
 
-            b.buy(pane, herd);
-            s.sell(pane, herd);
-        });
-        pane.add(labelFirstDice);
-        pane.add(labelSecondDice);
-    }
+            if (smallDog.isFree() == false) {
+                labelSmallDog.setVisible(true);
+            } else {
+                labelSmallDog.setVisible(false);
+            }
+
+            labelFirstDice.setBounds(150, 750, 100, 100);
+            labelSecondDice.setBounds(260, 750, 100, 100);
+
+            buttonThrowDice.setText("Throw Dice");
+            buttonThrowDice.setBounds(100, 750, 100, 100);
+            buttonThrowDice.setIcon(EAnimals.getDiceIcon());
+            System.out.println("rzut koscmi");
+
+            buttonThrowDice.setBounds(50, 750, 100, 100);
+            buttonThrowDice.setIcon(EAnimals.getDiceIcon());
+            System.out.println("rzut koscmi");
+
+            buttonDice1.setBounds(160, 710, 100, 50);
+            buttonDice1.setVisible(false);
+            buttonDice1.addActionListener(e -> {
+                notSameValueOnDice(pane, animalDice1);
+                buttonDice1.setVisible(false);
+                buttonDice2.setVisible(false);
+            });
+
+
+            buttonDice2.setBounds(270, 710, 100, 50);
+            buttonDice2.setVisible(false);
+            buttonDice2.addActionListener(e -> {
+                notSameValueOnDice(pane, animalDice2);
+                buttonDice1.setVisible(false);
+                buttonDice2.setVisible(false);
+            });
+
+
+            pane.add(labelBigDog);
+            pane.add(labelSmallDog);
+            pane.add(buttonDice1);
+            pane.add(buttonDice2);
+            pane.add(buttonThrowDice);
+
+
+            buttonThrowDice.addActionListener(action ->
+
+
+            {
+//            animalDice1 = 1;
+//            animalDice2 = 1;
+                animalDice1 = new Random().nextInt(8);
+                animalDice2 = new Random().nextInt(8) + 1;
+
+//            animalDice1 = new Random().nextInt(3);
+//            animalDice2 = new Random().nextInt(3);
+
+                labelFirstDice.setIcon(animalsList[animalDice1].getIconSize());
+                labelSecondDice.setIcon(animalsList[animalDice2].getIconSize());
+
+
+                if (animalDice1 == animalDice2) {
+                    sameValueOnDice(animalDice1, animalDice2);
+                    System.out.println(" if costam");
+                    buttonDice1.setVisible(false);
+                    buttonDice2.setVisible(false);
+
+                } else if (animalDice1 != animalDice2) {
+                    System.out.println("kostka 1" + animalDice1 + " " + "kostka 2 " + animalDice2);
+                    foxAndWolfs(animalDice1, animalDice2);
+                } else {
+                    buttonDice1.setVisible(true);
+                    buttonDice2.setVisible(true);
+                }
+
+                b.buy(pane, herd);
+                s.sell(pane, herd);
+//            sameValueOnDice(animalDice1, animalDice2);
+//            System.out.println(smallDog.isFree());
+            });
+            pane.add(labelFirstDice);
+            pane.add(labelSecondDice);
+
+
+               }
 
     public void notSameValueOnDice(JPanel pane, int animalDice1) {
         switch (animalDice1) {
@@ -169,70 +196,85 @@ public class Dice extends JPanel {
 
     }
 
-    public void sameValueOnDice(int animalDice1) {
-        switch (animalDice1) {
-            case 1:
-                labelSmallDog.setIcon(animalsList[animalDice1].getIconSize());
-                labelSmallDog.setVisible(true);
-                smallDog.setFree(false);
-            case 2:
-                horseRow.get(0).getLabel().setIcon(animalsList[animalDice1].getIconSize());
-                horseRow.get(0).setFree(false);
-                break;
-            case 3:
-                for (AnimalLabel a : cowRow) {
-                    if (a.isFree() == true) {
-                        a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
-                        a.setFree(false);
-                        break;
+    public void sameValueOnDice(int animalDice1, int animalDice2) {
+        if (animalDice1 == animalDice2) {
+            buttonDice1.setVisible(false);
+            buttonDice2.setVisible(false);
+            switch (animalDice1) {
+                case 1:
+                    labelSmallDog.setIcon(animalsList[animalDice1].getIconSize());
+                    labelSmallDog.setVisible(true);
+                    smallDog.setFree(false);
+                    System.out.println(smallDog.isFree());
+                    break;
+                case 2:
+                    horseRow.get(0).getLabel().setIcon(animalsList[animalDice1].getIconSize());
+                    horseRow.get(0).setFree(false);
+                    break;
+                case 3:
+                    for (AnimalLabel a : cowRow) {
+                        if (a.isFree() == true) {
+                            a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
+                            a.setFree(false);
+                            break;
+                        }
                     }
-                }
-                break;
-            case 4:
-                for (AnimalLabel a : pigsRow) {
-                    if (a.isFree() == true) {
-                        a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
-                        a.setFree(false);
-                        break;
+                    break;
+                case 4:
+                    for (AnimalLabel a : pigsRow) {
+                        if (a.isFree() == true) {
+                            a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
+                            a.setFree(false);
+                            break;
+                        }
                     }
-                }
-                break;
+                    break;
 
-            case 5:
-                for (AnimalLabel a : sheepsRow) {
-                    if (a.isFree() == true) {
-                        a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
-                        a.setFree(false);
-                        break;
+                case 5:
+                    for (AnimalLabel a : sheepsRow) {
+                        if (a.isFree() == true) {
+                            a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
+                            a.setFree(false);
+                            break;
+                        }
                     }
-                }
-                break;
-            case 6:
-                for (AnimalLabel a : rabbitsRow) {
-                    if (a.isFree() == true) {
-                        a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
-                        a.setFree(false);
-                        break;
+                    break;
+                case 6:
+                    for (AnimalLabel a : rabbitsRow) {
+                        if (a.isFree() == true) {
+                            a.getLabel().setIcon(animalsList[animalDice1].getIconSize());
+                            a.setFree(false);
+                            break;
+                        }
                     }
-                }
-                break;
+                    break;
 
-            case 7:
-                labelBigDog.setIcon(animalsList[animalDice1].getIconSize());
-                labelBigDog.setVisible(true);
-                bigDog.setFree(false);
+                case 7:
+                    labelBigDog.setIcon(animalsList[animalDice1].getIconSize());
+                    labelBigDog.setVisible(true);
+                    bigDog.setFree(false);
+                    break;
+
+            }
         }
     }
 
     public void foxAndWolfs(int animalDice1, int animalDice2) {
-        if (animalDice1 == 0 && smallDog.isFree() == true) {
+        if (animalDice1 == 0 && smallDog.isFree() == true && rabbitsRow.get(0).isFree() == false) {
+            System.out.println("nie masz psa");
+            System.out.println(" jeszcze nia ma psa " + smallDog.isFree());
             for (AnimalLabel a : rabbitsRow) {
                 a.getLabel().setIcon(EAnimals.getWaterBear());
                 a.setFree(true);
             }
+            labelSmallDog.setVisible(false);
+            System.out.println("gdzie jest pies " + smallDog.isFree());
 //            JOptionPane.showMessageDialog(this, "Nie masz psa więc Lis zabrał wszystkie twoje króliki Do Luster");
-        } else if (animalDice1 == 0 && smallDog.isFree() == false) {
+        } else if (animalDice1 == 0 && smallDog.isFree() == false && rabbitsRow.get(0).isFree() == false) {
+            System.out.println("masz psa");
+            System.out.println("był pies " + smallDog.isFree());
             smallDog.setFree(true);
+            System.out.println("nie ma psa " + smallDog.isFree());
         }
 
 
@@ -257,7 +299,8 @@ public class Dice extends JPanel {
                 cow.setFree(true);
             }
         } else if (animalDice2 == 8 && bigDog.isFree() == false) {
-            bigDog.setFree(false);
+            bigDog.setFree(true);
+            labelBigDog.setIcon(EAnimals.getWaterBear());
         }
 //            JOptionPane.showMessageDialog(this, "Wilk dzięki swojej charyzmie został prezydentem galaktyki i wysłał wszystkich poza koniem do gwiazdozbioru Lutni");
     }

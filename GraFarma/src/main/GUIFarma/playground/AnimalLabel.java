@@ -7,12 +7,14 @@ public class AnimalLabel extends JPanel {
     JLabel label;
     boolean isFree;
     String name;
-
+    Boolean Played;
 
     public AnimalLabel() {
         label = new JLabel();
         label.setIcon(EAnimals.getWaterBear());
         isFree = true;
+
+
     }
 
     public JLabel getLabel() {
