@@ -17,6 +17,7 @@ public class Buy2 extends JPanel {
     JButton[] buyButtonArray2;
     Sell2 s2;
 
+
     public Buy2() {
     }
 

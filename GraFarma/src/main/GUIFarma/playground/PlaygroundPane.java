@@ -21,7 +21,11 @@ public class PlaygroundPane extends JPanel {
     Buy2 b2;
     Sell2 s2;
     Dice d = new Dice();
-    Dice2 d2= new Dice2();
+    Dice2 d2 = new Dice2();
+
+    Boolean Gracz1 = false;
+    Boolean Gracz2 = false;
+
 
     AnimalLabel animalLabel;
     EAnimals[] animalsList = EAnimals.values();
@@ -32,7 +36,7 @@ public class PlaygroundPane extends JPanel {
     public static ArrayList<AnimalLabel> sheepsRow = new ArrayList<>();
     public static ArrayList<AnimalLabel> cowRow = new ArrayList<>();
     public static ArrayList<AnimalLabel> horseRow = new ArrayList<>();
-    
+
     AnimalLabel animalLabel2;
 
     public static ArrayList<ArrayList<AnimalLabel>> herd2 = new ArrayList<>();
@@ -45,7 +49,7 @@ public class PlaygroundPane extends JPanel {
     int size = 105;
     int x = 550;
     int y = 600;
-    
+
     JButton buttonReset2;
     int size1 = 105;
     int x1 = 1300;
@@ -86,6 +90,7 @@ public class PlaygroundPane extends JPanel {
             }
         });
         add(buttonReset);
+
         for (int i = 0; i < 5; i++) {
             for (int j = i; j < 5; j++) {
                 animalLabel = new AnimalLabel();
@@ -114,13 +119,13 @@ public class PlaygroundPane extends JPanel {
             }
         }
         d.throwDice(this, herd);
-        
+
         buttonReset2 = new JButton("RESET");
         buttonReset2.setBounds(1040, 50, 100, 50);
         buttonReset2.addActionListener(e -> {
-            for (ArrayList<AnimalLabel> animalList : herd2) {
+            for (ArrayList<AnimalLabel> animalList2 : herd2) {
 
-                for (AnimalLabel animalLabel: animalList) {
+                for (AnimalLabel animalLabel : animalList2) {
                     animalLabel.setFree(true);
                     animalLabel.getLabel().setIcon(EAnimals.getWaterBear());
                     System.out.println(animalsList.length + " wiersz ");
@@ -130,33 +135,34 @@ public class PlaygroundPane extends JPanel {
         add(buttonReset2);
         for (int i = 0; i < 5; i++) {
             for (int j = i; j < 5; j++) {
-                animalLabel = new AnimalLabel();
-                animalLabel.getLabel().setBounds(x1 - (j * (size1 + 10) - i * 50), y1 - (i * size), size, size);
-                add(animalLabel.getLabel());
+                animalLabel2 = new AnimalLabel();
+                animalLabel2.getLabel().setBounds(x1 - (j * (size1 + 10) - i * 50), y1 - (i * size), size, size);
+                add(animalLabel2.getLabel());
                 switch (i) {
                     case 0:
-                        rabbitsRow2.add(animalLabel);
+                        rabbitsRow2.add(animalLabel2);
                         break;
                     case 1:
-                        sheepsRow2.add(animalLabel);
+                        sheepsRow2.add(animalLabel2);
 
                         break;
                     case 2:
-                        pigsRow2.add(animalLabel);
+                        pigsRow2.add(animalLabel2);
 
                         break;
                     case 3:
-                        cowRow2.add(animalLabel);
+                        cowRow2.add(animalLabel2);
 
                         break;
                     case 4:
-                        horseRow2.add(animalLabel);
+                        horseRow2.add(animalLabel2);
                         break;
                 }
 
             }
         }
         d2.throwDice2(this, herd2);
+
+
     }
 }
-

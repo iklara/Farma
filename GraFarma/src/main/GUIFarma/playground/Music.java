@@ -36,10 +36,12 @@ public class Music implements WindowListener {
             if (true ) {
                 AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                 Clip clip = AudioSystem.getClip();
-//                clip.open(audioInput);
-//                clip.start();
-//                clip.loop(Clip.LOOP_CONTINUOUSLY);
+                clip.open(audioInput);
+                clip.start();
+                clip.loop(Clip.LOOP_CONTINUOUSLY);
 
+
+//
 //                Toolkit tk = frame.getToolkit();
 
 //                 if ((tk.isFrameStateSupported(Frame.NORMAL))){
