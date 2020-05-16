@@ -14,7 +14,7 @@ public class Buy2 extends JPanel {
     JButton buttonBuy2;
     String[] animalNames = new String[]{" królika", " owcę", " świnkę", " krowę", " konia"};
     EAnimals[] animalsList = EAnimals.values();
-    JButton[] buyButtonArray;
+    JButton[] buyButtonArray2;
     Sell s2;
 
     public Buy2() {
@@ -22,7 +22,7 @@ public class Buy2 extends JPanel {
 
     public void buy2(JPanel pane2, ArrayList<ArrayList<AnimalLabel>> herd2) {
         s2 = new Sell();
-        buyButtonArray = new JButton[herd2.size()];
+        buyButtonArray2 = new JButton[herd2.size()];
         for (ArrayList<AnimalLabel> hl2 : herd2) {
             int buyCounter = 0;
             for (AnimalLabel al2 : hl2) {
@@ -33,7 +33,7 @@ public class Buy2 extends JPanel {
                     pane2.add(buttonBuy2 = new JButton("Kup" + animalNames[herd2.indexOf(hl2) + 1]));
                     buttonBuy2.setName(String.valueOf(herd2.indexOf(hl2)));
                     buttonBuy2.setBounds(120 + hl2.get(0).getLabel().getX(), al2.getLabel().getY(), 150, 40);
-                    buyButtonArray[herd2.indexOf(hl2)] = buttonBuy2;
+                    buyButtonArray2[herd2.indexOf(hl2)] = buttonBuy2;
 
                     buttonBuy2.addActionListener(action -> {
 

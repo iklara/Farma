@@ -18,8 +18,8 @@ public class PlaygroundPane extends JPanel {
 
     Buy b;
     Sell s;
-    Buy b2;
-    Sell s2;
+    Buy2 b2;
+    Sell2 s2;
     Dice d = new Dice();
     Dice2 d2= new Dice2();
 
@@ -34,7 +34,7 @@ public class PlaygroundPane extends JPanel {
     public static ArrayList<AnimalLabel> horseRow = new ArrayList<>();
     
     AnimalLabel animalLabel2;
-  //  EAnimals[] animalsList = EAnimals.values();
+
     public static ArrayList<ArrayList<AnimalLabel>> herd2 = new ArrayList<>();
     public static ArrayList<AnimalLabel> rabbitsRow2 = new ArrayList<>();
     public static ArrayList<AnimalLabel> pigsRow2 = new ArrayList<>();
@@ -54,8 +54,8 @@ public class PlaygroundPane extends JPanel {
     public PlaygroundPane() {
         b = new Buy();
         s = new Sell();
-        b2 = new Buy();
-        s2 = new Sell();
+        b2 = new Buy2();
+        s2 = new Sell2();
 
         setBackground(Color.white);
 
