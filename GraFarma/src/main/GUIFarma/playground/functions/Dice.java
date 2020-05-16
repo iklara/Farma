@@ -11,6 +11,8 @@ import java.util.Random;
 
 import static playground.PlaygroundPane.*;
 
+
+//Gra 1 szy gracz
 public class Dice extends JPanel {
 
     AnimalLabel smallDog = new AnimalLabel();
@@ -32,6 +34,9 @@ public class Dice extends JPanel {
     int animalDice2;
     EAnimals[] animalsList = EAnimals.values();
 
+
+
+
     public Dice() {
     }
 
@@ -41,11 +46,11 @@ public class Dice extends JPanel {
         bigDog.getLabel().setIcon(EAnimals.BIGDOG.getIconSize());
 
         labelBigDog.setIcon(EAnimals.BIGDOG.getIconSize());
-        labelBigDog.setBounds(500, 750, 100, 100);
+        labelBigDog.setBounds(550, 750, 100, 100);
 
 
         labelSmallDog.setIcon(EAnimals.SMALLDOG.getIconSize());
-        labelSmallDog.setBounds(550, 750, 100, 100);
+        labelSmallDog.setBounds(430, 750, 100, 100);
 
         if (bigDog.isFree() == false) {
             labelBigDog.setVisible(true);
@@ -58,7 +63,6 @@ public class Dice extends JPanel {
         } else {
             labelSmallDog.setVisible(false);
         }
-
 
         labelFirstDice.setBounds(150, 750, 100, 100);
         labelSecondDice.setBounds(260, 750, 100, 100);
