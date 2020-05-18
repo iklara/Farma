@@ -3,16 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2b65e640-93a0-42c0-a045-25b3dde2bb4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/AnimalLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/AnimalLabel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/Music.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/Music.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/PlaygroundPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/PlaygroundPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/functions/Buy2.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/functions/Buy2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/functions/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/functions/Dice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/functions/Dice2.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/functions/Dice2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SwingMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SwingMain$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SwingMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SwingMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/playground/PlaygroundPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/playground/PlaygroundPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/playground/functions/Dice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/playground/functions/Dice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/MyJFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/playground/MyJFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MyJFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SwingMain$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SwingMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/playground/AnimalLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/playground/AnimalLabel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/GraFarma/src/main/GUIFarma" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/GraFarma/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -73,20 +72,21 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/GraFarma/src/main/GUIFarma/SwingMain.java" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\iwkar\new-workspace\Farma\Farma\GraFarma\src\main\resources" />
-      <recent name="E:\Projekty IntelliJ\FarmaIP02032020\Farma\GraFarma\src\main\resources" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="GUIFarma" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projekty IntelliJ\FarmaIP02032020\Farma\GraFarma\src\main\resources" />
+      <recent name="E:\Projekty IntelliJ\FarmaIP02032020\Farma\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="playground.functions" />
       <recent name="playground" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Projekty IntelliJ\FarmaIP02032020\Farma\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\iwkar\new-workspace\Farma\Farma\GraFarma\src\main\resources" />
+      <recent name="E:\Projekty IntelliJ\FarmaIP02032020\Farma\GraFarma\src\main\resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -94,20 +94,7 @@
       <command value="false" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.SwingMain (1)">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="playground.Main" />
-      <module name="Farma" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="playground.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.SwingMain">
     <configuration name="SetActionCommandForJButton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="playground.SetActionCommandForJButton" />
       <module name="Farma" />
@@ -124,6 +111,19 @@
     <configuration name="SwingMain (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SwingMain" />
       <module name="Farma" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SwingMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="playground.functions.SwingMain" />
+      <module name="Farma" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="playground.functions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -179,6 +179,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SwingMain" />
         <item itemvalue="Application.SwingMain (1)" />
         <item itemvalue="Application.maintest" />
         <item itemvalue="Application.SetActionCommandForJButton" />
@@ -237,6 +238,9 @@
       <workItem from="1588789068396" duration="11776000" />
       <workItem from="1588868696046" duration="22947000" />
       <workItem from="1589094454451" duration="2533000" />
+      <workItem from="1589735512978" duration="733000" />
+      <workItem from="1589742593574" duration="2778000" />
+      <workItem from="1589809163358" duration="708000" />
     </task>
     <task id="LOCAL-00001" summary="Dodany 2gi gracz, poszerzona ramka, dodana muzyka, dodana miniaturka">
       <created>1589309060313</created>
@@ -400,30 +404,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="627" y="118" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589617963792" />
-    <state x="100" y="100" width="1720" height="840" key="DiffContextDialog" timestamp="1583164649534">
+    <state x="100" y="100" width="1720" height="840" key="DiffContextDialog" timestamp="1589661750812">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="100" y="100" width="1720" height="840" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583164649534" />
+    <state x="100" y="100" width="1720" height="840" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589661750812" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1589309749724">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589309749724" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1589651096858">
+    <state width="1877" height="259" key="GridCell.Tab.0.bottom" timestamp="1589745373651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589651096858" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1589651096858">
+    <state width="1877" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589745373651" />
+    <state width="1877" height="259" key="GridCell.Tab.0.center" timestamp="1589745373651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589651096858" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1589651096858">
+    <state width="1877" height="259" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589745373651" />
+    <state width="1877" height="259" key="GridCell.Tab.0.left" timestamp="1589745373651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589651096858" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1589651096858">
+    <state width="1877" height="259" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589745373651" />
+    <state width="1877" height="259" key="GridCell.Tab.0.right" timestamp="1589745373651">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589651096858" />
+    <state width="1877" height="259" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589745373651" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589561413080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -460,10 +464,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="298" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583266465158" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1589432450305">
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589661750813">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589432450305" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589661750813" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1589809163420">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589809163420" />
     <state x="771" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589308990606">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

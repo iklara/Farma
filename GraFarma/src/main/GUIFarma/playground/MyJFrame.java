@@ -1,3 +1,4 @@
+package playground;
 
 import playground.PlaygroundPane;
 

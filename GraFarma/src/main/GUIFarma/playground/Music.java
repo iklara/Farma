@@ -26,42 +26,26 @@ public class Music implements WindowListener {
     }
 
 
+    public void playMusic(String musicLocation, JFrame jFrame) {
+        long soundStoper = 0;
+        try {
+            File musicPath = new File(musicLocation);
+            Clip clip = AudioSystem.getClip();
 
-
-    public void playMusic(String musicLocation)
-    {
-        try{
-            File musicPath= new File (musicLocation);
-
-            if (true ) {
+            if (jFrame.getState() != Frame.ICONIFIED) {
+                System.out.println(jFrame.getState());
                 AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
-                Clip clip = AudioSystem.getClip();
+                clip = AudioSystem.getClip();
                 clip.open(audioInput);
                 clip.start();
                 clip.loop(Clip.LOOP_CONTINUOUSLY);
 
-
-//
-//                Toolkit tk = frame.getToolkit();
-
-//                 if ((tk.isFrameStateSupported(Frame.NORMAL))){
-//                    clip.start();
-//                    clip.loop(Clip.LOOP_CONTINUOUSLY);
-//                }
-//                if ((tk.isFrameStateSupported(Frame.ICONIFIED))) {
-//                    long clipTimePosition = clip.getMicrosecondPosition();
-//                    clip.stop();
-//                }
-//                else if ((tk.isFrameStateSupported(Frame.MAXIMIZED_BOTH))){
-             //       clip.setMicrosecondPosition(clipTimePosition);
-               //     clip.start();
-            //    }
-
             } else {
-
-               System.out.println("Muzyka nie znaleziona");
+                soundStoper = clip.getMicrosecondLength();
+                clip.stop();
+                System.out.println("Muzyka nie znaleziona");
             }
-        }catch (Exception Ex) {
+        } catch (Exception Ex) {
             Ex.printStackTrace();
         }
     }
