@@ -3,10 +3,7 @@ package playground;
 import sun.util.resources.ms.CalendarData_ms_MY;
 
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowFocusListener;
-import java.awt.event.WindowListener;
+import java.awt.event.*;
 import java.io.File;
 
 import javax.sound.sampled.AudioInputStream;
@@ -15,10 +12,11 @@ import javax.sound.sampled.Clip;
 import javax.swing.*;
 
 
-public class Music implements WindowListener {
+public class Music implements WindowListener{
 
 
     static JFrame frame;
+    private WindowEvent event;
 
     public void WindowEvent() {
         frame.addWindowListener(this);
@@ -27,12 +25,11 @@ public class Music implements WindowListener {
 
 
 
-
     public void playMusic(String musicLocation)
     {
         try{
             File musicPath= new File (musicLocation);
-
+            String staus;
             if (true ) {
                 AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
                 Clip clip = AudioSystem.getClip();
@@ -41,21 +38,66 @@ public class Music implements WindowListener {
                 clip.loop(Clip.LOOP_CONTINUOUSLY);
 
 
-//
-//                Toolkit tk = frame.getToolkit();
-
-//                 if ((tk.isFrameStateSupported(Frame.NORMAL))){
-//                    clip.start();
-//                    clip.loop(Clip.LOOP_CONTINUOUSLY);
-//                }
-//                if ((tk.isFrameStateSupported(Frame.ICONIFIED))) {
+//                if ((event.getNewState() & Frame.ICONIFIED) == Frame.ICONIFIED) {
+//                    System.out.println("minimalizacja");
 //                    long clipTimePosition = clip.getMicrosecondPosition();
 //                    clip.stop();
 //                }
-//                else if ((tk.isFrameStateSupported(Frame.MAXIMIZED_BOTH))){
-             //       clip.setMicrosecondPosition(clipTimePosition);
-               //     clip.start();
-            //    }
+               // resume play przy otweiraniu
+            //    clip.setMicrosecondPosition(clipTimePosition);
+             //   clip.start();
+
+// 3cie podejscie  z klasami
+
+//                // Method to play the audio
+//                public void play(){                {
+//                    clip.start();
+//                    status = "play";
+//                }
+//
+//                public void pause(){
+//                        {
+//                            this.currentFrame =
+//                                    this.clip.getMicrosecondPosition();
+//                            clip.stop();
+//                            status = "paused";
+//                        }
+//                public void resumeAudio() throws UnsupportedAudioFileException,
+//                        IOException, LineUnavailableException
+//
+//                    clip.setMicrosecondPosition(currentFrame);
+//                    this.play();
+//                }
+
+
+// 2gi podejscie z okienkiem
+//
+//               JOptionPane.showMessageDialog(null, "hit OK to pouse");
+//                long clipTimePosition = clip.getMicrosecondPosition();
+//                clip.stop();
+//
+//              JOptionPane.showMessageDialog(null, "hit OK to play");
+//                clip.setMicrosecondPosition(clipTimePosition);
+//                clip.start();
+
+
+
+
+
+//            *****Muzic pauze attempt
+//              public void frameState(WindowEvent event) {
+//                    if ((event.getNewState() & Frame.ICONIFIED) == Frame.ICONIFIED) {
+//                    System.out.println("minimalizacja");
+//                        clipTimePosition = clip.getMicrosecondPosition();
+//                    clip.stop();
+//
+//                    } else if ((event.getNewState() & Frame.NORMAL) == Frame.NORMAL) {
+//                        System.out.println("normalneokno");
+//                       clip.setMicrosecondPosition(clipTimePosition);
+//                             clip.start();
+//                    }
+
+
 
             } else {
 
