@@ -42,6 +42,5 @@ This game is a final project for "Programmator" in Connectis company www.connect
 supervision
 
 
-![Screenshot](farma.jpg)
-<img src="farma.jpg" alt="Image"/>
+
 
