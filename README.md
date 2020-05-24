@@ -7,12 +7,7 @@ Tematem gry jest zabawa rodzinna Farma. Gra przeznaczona jest dla 2 osob.
 
 Gracz na skutek rzutu kostka rozbudowuje swoje stado. Możliwość losowania królików, owiec,świń, krów,
 koni, mały i duży pies. Gy gracz wylosuje 2 takie same zwierzęta trafiają one do stada.
-Zwierzęta można wymieniać zgodnie z ponizsza tabela:
-2 kroliki - 1 owca
-2 owce - 1 swinia
-2 swinie - 1 krowa lub kon
-2 owce - 1 maly pies
-2 swinie - 1 duzy pies
+Zwierzęta można wymieniać.
 Jeśli gracz wyrzuci lisa, to traci na rzecz stada wszystkie posiadane króliki. 
 Jeśli wyrzuci wilka, traci wszystkie posiadane zwierzęta, z wyjątkiem konia i małego psa, jeśli je ma.
 Jeżeli gracz wyrzucił wilka i lisa, ma małego psa, ale nie posiada dużego, to traci wszystkie zwierzęta poza koniem.
@@ -35,7 +30,7 @@ Autors: Piotr Zebzda & Iwona Radziwon
 
 This is a family game. The gamer will build its herd by throwing a dice. Once same animal will be shown,
 this animal will become a gammer herd. There is a variety of animals available : rabbit, sheep, pig, cow,
-horse, small dog , big dog. Gamer can change the 2 animal per other animal (e.g. 2 rabbits for 1 sheep etc).
+horse, small dog , big dog. Gamer can change animals.
 However once there is wolf gamer will lose its herd , unless he/she has a dog.  The end of this game is once gamer loses its herd.
 
 Program based on Java 8.
