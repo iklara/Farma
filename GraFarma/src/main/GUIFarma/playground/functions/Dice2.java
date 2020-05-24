@@ -1,6 +1,7 @@
 package playground.functions;
 
-import playground.AnimalLabel;
+
+import playground.AnimalLabel2;
 import playground.EAnimals;
 
 import javax.swing.*;
@@ -15,10 +16,10 @@ public class Dice2 extends JPanel {
 
 
 
-    AnimalLabel smallDog2 = new AnimalLabel();
-    AnimalLabel bigDog2 = new AnimalLabel();
-    Buy b2 = new Buy();
-    Sell s2 = new Sell();
+    AnimalLabel2 smallDog2 = new AnimalLabel2();
+    AnimalLabel2 bigDog2 = new AnimalLabel2();
+    Buy2 b2 = new Buy2();
+    Sell2 s2 = new Sell2();
 
 
 
@@ -38,7 +39,7 @@ public class Dice2 extends JPanel {
     public Dice2() {
     }
 
-    public void throwDice2(JPanel pane2, ArrayList<ArrayList<AnimalLabel>> herd2) {
+    public void throwDice2(JPanel pane2, ArrayList<ArrayList<AnimalLabel2>> herd2) {
 //        if (!Played) {
 //            Played = true;
 //            System.out.println("tym razem sie uda" + Played);
@@ -52,13 +53,13 @@ public class Dice2 extends JPanel {
             labelSmallDog2.setIcon(EAnimals.SMALLDOG.getIconSize());
             labelSmallDog2.setBounds(1200, 750, 100, 100);
 
-            if (bigDog2.isFree() == false) {
+            if (bigDog2.isFree2() == false) {
                 labelBigDog2.setVisible(true);
             } else {
                 labelBigDog2.setVisible(false);
             }
 
-            if (smallDog2.isFree() == false) {
+            if (smallDog2.isFree2() == false) {
                 labelSmallDog2.setVisible(true);
             } else {
                 labelSmallDog2.setVisible(false);
@@ -132,8 +133,8 @@ public class Dice2 extends JPanel {
                     buttonDice22.setVisible(true);
                 }
 
-                b2.buy(pane2, herd2);
-                s2.sell(pane2, herd2);
+                b2.buy2(pane2, herd2);
+                s2.sell2(pane2, herd2);
 
             });
             pane2.add(labelFirstDice2);
@@ -152,7 +153,7 @@ public class Dice2 extends JPanel {
             switch (animalDice12) {
                 case 6:
                     for (int i = 1; i < rabbitsRow2.size(); i++) {
-                        if (rabbitsRow2.get(i).isFree() == true && rabbitsRow2.get(i - 1).isFree() == false) {
+                        if (rabbitsRow2.get(i).isFree2() == true && rabbitsRow2.get(i - 1).isFree2() == false) {
                             rabbitsRow2.get(i).getLabel().setIcon(animalsList[6].getIconSize());
                             rabbitsRow2.get(i).setFree(false);
                             System.out.println(i);
@@ -162,7 +163,7 @@ public class Dice2 extends JPanel {
                     break;
                 case 5:
                     for (int i = 1; i < sheepsRow2.size(); i++) {
-                        if (sheepsRow2.get(i).isFree() == true && sheepsRow2.get(i - 1).isFree() == false) {
+                        if (sheepsRow2.get(i).isFree2() == true && sheepsRow2.get(i - 1).isFree2() == false) {
                             sheepsRow2.get(i).getLabel().setIcon(animalsList[5].getIconSize());
                             sheepsRow2.get(i).setFree(false);
                             break;
@@ -171,7 +172,7 @@ public class Dice2 extends JPanel {
                     break;
                 case 4:
                     for (int i = 1; i < pigsRow2.size(); i++) {
-                        if (pigsRow2.get(i).isFree() == true && pigsRow2.get(i - 1).isFree() == false) {
+                        if (pigsRow2.get(i).isFree2() == true && pigsRow2.get(i - 1).isFree2() == false) {
                             pigsRow2.get(i).getLabel().setIcon(animalsList[4].getIconSize());
                             pigsRow2.get(i).setFree(false);
                             break;
@@ -180,7 +181,7 @@ public class Dice2 extends JPanel {
                     break;
                 case 3:
                     for (int i = 1; i < cowRow2.size(); i++) {
-                        if (cowRow2.get(i).isFree() == true && cowRow2.get(i - 1).isFree() == false) {
+                        if (cowRow2.get(i).isFree2() == true && cowRow2.get(i - 1).isFree2() == false) {
                             cowRow2.get(i).getLabel().setIcon(animalsList[3].getIconSize());
                             cowRow2.get(i).setFree(false);
                             break;
@@ -189,7 +190,7 @@ public class Dice2 extends JPanel {
                     break;
                 case 2:
                     for (int i = 1; i < horseRow2.size(); i++) {
-                        if (horseRow2.get(i).isFree() == true && horseRow2.get(i - 1).isFree() == false) {
+                        if (horseRow2.get(i).isFree2() == true && horseRow2.get(i - 1).isFree2() == false) {
                             horseRow2.get(i).getLabel().setIcon(animalsList[2].getIconSize());
                             horseRow2.get(i).setFree(false);
                             break;
@@ -210,15 +211,15 @@ public class Dice2 extends JPanel {
                         labelSmallDog2.setIcon(animalsList[animalDice12].getIconSize());
                         labelSmallDog2.setVisible(true);
                         smallDog2.setFree(false);
-                        System.out.println(smallDog2.isFree());
+                        System.out.println(smallDog2.isFree2());
                         break;
                     case 2:
                         horseRow2.get(0).getLabel().setIcon(animalsList[animalDice12].getIconSize());
                         horseRow2.get(0).setFree(false);
                         break;
                     case 3:
-                        for (AnimalLabel a : cowRow2) {
-                            if (a.isFree() == true) {
+                        for (AnimalLabel2 a : cowRow2) {
+                            if (a.isFree2() == true) {
                                 a.getLabel().setIcon(animalsList[animalDice12].getIconSize());
                                 a.setFree(false);
                                 break;
@@ -226,8 +227,8 @@ public class Dice2 extends JPanel {
                         }
                         break;
                     case 4:
-                        for (AnimalLabel a : pigsRow2) {
-                            if (a.isFree() == true) {
+                        for (AnimalLabel2 a : pigsRow2) {
+                            if (a.isFree2() == true) {
                                 a.getLabel().setIcon(animalsList[animalDice12].getIconSize());
                                 a.setFree(false);
                                 break;
@@ -236,8 +237,8 @@ public class Dice2 extends JPanel {
                         break;
 
                     case 5:
-                        for (AnimalLabel a : sheepsRow2) {
-                            if (a.isFree() == true) {
+                        for (AnimalLabel2 a : sheepsRow2) {
+                            if (a.isFree2() == true) {
                                 a.getLabel().setIcon(animalsList[animalDice12].getIconSize());
                                 a.setFree(false);
                                 break;
@@ -245,8 +246,8 @@ public class Dice2 extends JPanel {
                         }
                         break;
                     case 6:
-                        for (AnimalLabel a : rabbitsRow2) {
-                            if (a.isFree() == true) {
+                        for (AnimalLabel2 a : rabbitsRow2) {
+                            if (a.isFree2() == true) {
                                 a.getLabel().setIcon(animalsList[animalDice12].getIconSize());
                                 a.setFree(false);
                                 break;
@@ -265,45 +266,45 @@ public class Dice2 extends JPanel {
         }
 
         public void foxAndWolfs2 ( int animalDice12, int animalDice22){
-            if (animalDice12 == 0 && smallDog2.isFree() == true && rabbitsRow2.get(0).isFree() == false) {
+            if (animalDice12 == 0 && smallDog2.isFree2() == true && rabbitsRow2.get(0).isFree2() == false) {
                 System.out.println("nie masz psa");
-                System.out.println(" jeszcze nia ma psa " + smallDog2.isFree());
-                for (AnimalLabel a : rabbitsRow2) {
+                System.out.println(" jeszcze nia ma psa " + smallDog2.isFree2());
+                for (AnimalLabel2 a : rabbitsRow2) {
                     a.getLabel().setIcon(EAnimals.getWaterBear());
                     a.setFree(true);
                 }
                 labelSmallDog2.setVisible(false);
-                System.out.println("gdzie jest pies " + smallDog2.isFree());
+                System.out.println("gdzie jest pies " + smallDog2.isFree2());
 //            JOptionPane.showMessageDialog(this, "Nie masz psa więc Lis zabrał wszystkie twoje króliki Do Luster");
-            } else if (animalDice12 == 0 && smallDog2.isFree() == false && rabbitsRow.get(0).isFree() == false) {
+            } else if (animalDice12 == 0 && smallDog2.isFree2() == false && rabbitsRow2.get(0).isFree2() == false) {
                 System.out.println("masz psa");
-                System.out.println("był pies " + smallDog2.isFree());
+                System.out.println("był pies " + smallDog2.isFree2());
                 smallDog2.setFree(true);
-                System.out.println("nie ma psa " + smallDog2.isFree());
+                System.out.println("nie ma psa " + smallDog2.isFree2());
             }
 
 
-            if (animalDice22 == 8 && bigDog2.isFree() == true) {
-                for (AnimalLabel rabbit : rabbitsRow2) {
+            if (animalDice22 == 8 && bigDog2.isFree2() == true) {
+                for (AnimalLabel2 rabbit : rabbitsRow2) {
                     rabbit.getLabel().setIcon(EAnimals.getWaterBear());
                     rabbit.setFree(true);
                 }
 
-                for (AnimalLabel sheep : sheepsRow2) {
+                for (AnimalLabel2 sheep : sheepsRow2) {
                     sheep.getLabel().setIcon(EAnimals.getWaterBear());
                     sheep.setFree(true);
                 }
 
-                for (AnimalLabel pig : pigsRow2) {
+                for (AnimalLabel2 pig : pigsRow2) {
                     pig.getLabel().setIcon(EAnimals.getWaterBear());
                     pig.setFree(true);
                 }
 
-                for (AnimalLabel cow : cowRow2) {
+                for (AnimalLabel2 cow : cowRow2) {
                     cow.getLabel().setIcon(EAnimals.getWaterBear());
                     cow.setFree(true);
                 }
-            } else if (animalDice22 == 8 && bigDog2.isFree() == false) {
+            } else if (animalDice22 == 8 && bigDog2.isFree2() == false) {
                 bigDog2.setFree(true);
                 labelBigDog2.setIcon(EAnimals.getWaterBear());
             }

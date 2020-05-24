@@ -37,14 +37,14 @@ public class PlaygroundPane extends JPanel {
     public static ArrayList<AnimalLabel> cowRow = new ArrayList<>();
     public static ArrayList<AnimalLabel> horseRow = new ArrayList<>();
 
-    AnimalLabel animalLabel2;
+    AnimalLabel2 animalLabel2;
 
-    public static ArrayList<ArrayList<AnimalLabel>> herd2 = new ArrayList<>();
-    public static ArrayList<AnimalLabel> rabbitsRow2 = new ArrayList<>();
-    public static ArrayList<AnimalLabel> pigsRow2 = new ArrayList<>();
-    public static ArrayList<AnimalLabel> sheepsRow2 = new ArrayList<>();
-    public static ArrayList<AnimalLabel> cowRow2 = new ArrayList<>();
-    public static ArrayList<AnimalLabel> horseRow2 = new ArrayList<>();
+    public static ArrayList<ArrayList<AnimalLabel2>> herd2 = new ArrayList<>();
+    public static ArrayList<AnimalLabel2> rabbitsRow2 = new ArrayList<>();
+    public static ArrayList<AnimalLabel2> pigsRow2 = new ArrayList<>();
+    public static ArrayList<AnimalLabel2> sheepsRow2 = new ArrayList<>();
+    public static ArrayList<AnimalLabel2> cowRow2 = new ArrayList<>();
+    public static ArrayList<AnimalLabel2> horseRow2 = new ArrayList<>();
     JButton buttonReset;
     int size = 105;
     int x = 550;
@@ -123,11 +123,11 @@ public class PlaygroundPane extends JPanel {
         buttonReset2 = new JButton("RESET");
         buttonReset2.setBounds(1040, 50, 100, 50);
         buttonReset2.addActionListener(e -> {
-            for (ArrayList<AnimalLabel> animalList2 : herd2) {
+            for (ArrayList<AnimalLabel2> animalList : herd2) {
 
-                for (AnimalLabel animalLabel : animalList2) {
-                    animalLabel.setFree(true);
-                    animalLabel.getLabel().setIcon(EAnimals.getWaterBear());
+                for (AnimalLabel2 animalLabel2 : animalList) {
+                    animalLabel2.setFree(true);
+                    animalLabel2.getLabel().setIcon(EAnimals.getWaterBear());
                     System.out.println(animalsList.length + " wiersz ");
                 }
             }
@@ -135,7 +135,7 @@ public class PlaygroundPane extends JPanel {
         add(buttonReset2);
         for (int i = 0; i < 5; i++) {
             for (int j = i; j < 5; j++) {
-                animalLabel2 = new AnimalLabel();
+                animalLabel2 = new AnimalLabel2();
                 animalLabel2.getLabel().setBounds(x1 - (j * (size1 + 10) - i * 50), y1 - (i * size), size, size);
                 add(animalLabel2.getLabel());
                 switch (i) {
